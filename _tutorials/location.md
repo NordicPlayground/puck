@@ -110,19 +110,14 @@ Most of the files are not important right now, but note the file named Puck.h.
 This file contains all of the bootstrapping code necessary for making a Puck.
 Go back to main.cpp and write the following code to make a location puck.
 
-```
-<<code title=The entirety of main.cpp>>
+    #include "Puck.h"
 
-#include "Puck.h"
+    Puck *puck = &Puck::getPuck();
 
-Puck *puck = &Puck::getPuck();
-
-int main(void) {
-    puck->init(0xBEEF);
-    while(puck->drive());
-}
-<</code>>
-```
+    int main(void) {
+        puck->init(0xBEEF);
+        while(puck->drive());
+    }
 
 The first line of code after the include is where we get a reference to the global Puck object.
 This object takes care of setting up Bluetooth. In the main function we initialize our puck and pass in an identifying number.
@@ -160,7 +155,7 @@ Congratulations! You are now done with this tutorial!
 You have a fully functioning location puck!
 You can read about how to use this location puck with your smartphone in one of our puck app guides:
 
-iOS: <#link to iOS guide here#>
-Android: <#link to Android guide here#>
+- iOS: <#link to iOS guide here#>
+- Android: <#link to Android guide here#>
 
 These guides will introduce you to the concept about rules for you pucks. This is the technique we use to make your pucks interact with your phone.
