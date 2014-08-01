@@ -398,6 +398,14 @@ img
   padding-bottom:30px
 }
 
+.post img
+{
+  display: block;
+  position: relative;
+  max-width: 60%;
+  margin: 10px auto;
+}
+
 .user-social
 {
   color:#c4c4c4;

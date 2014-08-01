@@ -27,7 +27,7 @@ Compiling your code at mbed.org will download a .hex file to your computer, whic
 The mbed will flash its lights for a few seconds, and afterwards you will need to press the reset button in order to start your newly transferred (flashed) program.
 
 First go to http://www.mbed.org - you will be presented with a page looking like this:
-mbed_login_signup.PNG
+![](../images/mbed_login_signup.PNG)
 
 Press the login or signup button and create yourself a user account.
 
@@ -36,19 +36,19 @@ You will be able to enter the online IDE now and start your own projects!
 The online IDE for mbed is called "Compiler". It is where you will write your code, import libraries and even review pull requests, all in the browser.
 Press the compiler button in the top right corner to enter the compiler.
 
-mbed_compiler.PNG
+![](../images/mbed_compiler.PNG)
 
 When you first enter the compiler it will look like any other program on your computer.
 This is the compiler you will use for every mbed out there.
 You therefore have to start off by adding your mbed to your compiler.
 Do this by pressing the "No device selected" button.
 
-mbed_entered_compiler.PNG
+![](../images/mbed_entered_compiler.PNG)
 
 You will be prompted with a button that says "Add Platform" with a big plus sign on it.
 Press that button and add your "Nordic nRF51822" device to the compiler by first selecting that one from the list and press "Add to your mbed Compiler" in the new window.
 
-mbed_add_to_compiler.PNG
+![](../images/mbed_add_to_compiler.PNG)
 
 Go back to your compiler and press the "No selected device" button again.
 Now select your "Nordic nRF51822" device by pressing that one first and the "Select platform" button after. You are now ready to add some programs to your compiler.
@@ -57,7 +57,7 @@ Now select your "Nordic nRF51822" device by pressing that one first and the "Sel
 To create a new program in your compiler press the New button in the top left side of the compiler.
 If you press the arrow on the side, you are prompted with multiple choices as to what kind of code you are writing, select New Program. You will now have some choices to what you program is.
 
-mbed_new_program.PNG
+![](../images/mbed_new_program.PNG)
 
 The platform should be set to Nordic nRF51822.
 You also have the choice to pick a template for your program.
@@ -66,7 +66,7 @@ We will choose the Blinky LED Hello World template.
 The last choice is a checkbox telling you that it will update this program and libraries to the latest revision.
 This is a good idea, since new revisions often bring in bugfixes and makes the libraries you are using more stable.
 
-mbed_first_program.PNG
+![](../images/mbed_first_program.PNG)
 
 On the right side after you have added a new program you will see your programs.
 The folder named mbed_blinky (or whatever you named your program) is your program.
@@ -91,14 +91,14 @@ We will now create a location puck from scratch.
 To do this, create a new program, but change the template to "Empty program".
 Name your program something cool and press OK. Right click on your newly created program in the left column, and select New File. Name your file main.cpp.
 
-mbed_new_file.PNG
+![](../images/mbed_new_file.PNG)
 
 Now we have an empty main.cpp file, but before we write some code, we want to import a library that we've created.
 It's a Puck library, which makes Puck creation very easy by handling some of the more tedious housekeeping required to keep a puck running.
 To do this we make sure to have selected our puck project and press the "Import" button next to the "New" button on the top bar.
 Alternativly we can press CTRL/CMD + I. We are now prompted with the Import Wizard. This wizard lets you import libraries from mbed.org.
 
-mbed_import_wizard.PNG
+![](../images/mbed_import_wizard.PNG)
 
 The first thing you will be prompted with is the mbed library.
 This is a vital library you will need in all of your projects. Import that one first.
@@ -134,12 +134,12 @@ Your published work can be either public, unlisted or private.
 When you are finished with your program press "Commit" from the top bar or CTRL/CMD + SHIFT + C.
 Write a message that's descriptive of what you've done.
 
-mbed_commit.PNG
+![](../images/mbed_commit.PNG)
 
 Afterwards press the "Revisions" button next to the "Commit" button to see all your commits.
 If you are happy with what you've got, you can press the "Publish" button to publish your brand new puck program.
 
-mbed_revisions.PNG
+![](../images/mbed_revisions.PNG)
 
 You will be prompted with a few choices.
 Choose the ones that make sense for you. One important thing is to note if you have a program or a library.
@@ -147,7 +147,7 @@ This tutorial makes a program which is what you should choose here.
 Also make a choice about visibility of your program. When you press OK you will get a link to where your program is on mbed.org.
 
 
-IMG_20140729_142743.jpg
+![](../images/IMG_20140729_142743.jpg)
 
 mbed Location Puck
 
