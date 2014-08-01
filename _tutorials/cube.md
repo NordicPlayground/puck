@@ -25,7 +25,7 @@ Finished program available at http://mbed.org/teams/Nordic-Pucks/code/cube-puck/
 The MPU5060 IMU comes pre-soldered onto a breakout board, so we will need to connect it to our mbed using wires.
 We soldered some header pins to our IMU breakout board to allow easy wire connection, but you can also solder your wires directly onto the through-holes.
 
-2014-07-30 16.52.09.jpg
+![](../images/2014-07-30 16.52.09.jpg)
 
 For this application we will need to set up a TWI (I2C) connection (a simple two-wire bus interface) between the mbed board and the MPU5060, as well as connect power and ground.
 The following table shows the wire mappings used in this project.
@@ -47,11 +47,11 @@ The MPU5060 also supports interrupts using the INT pin, but we will not be using
 
 MPU5060 wiring:
 
-2014-07-30 16.51.07.jpg
+![](../images/2014-07-30 16.51.07.jpg)
 
 mbed with finished wiring:
 
-2014-07-30 16.53.24.jpg
+![](../images/2014-07-30 16.53.24.jpg)
 
 ## Software:
 ### Basic setup
@@ -64,7 +64,8 @@ The only difference from the original is that this library has changed the I2C p
 
 Import the library and include it in your main.cpp file.
 
-MPU library.PNG
+![](../images/MPU library.PNG)
+
 The library to import
 
 IMU setup and initialization
