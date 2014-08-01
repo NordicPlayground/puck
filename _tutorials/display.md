@@ -24,27 +24,29 @@ We will be using an e-ink display from seeedstudio. It comes with a shield which
 
 The connections we have chosen are as follows:
 
-LPC1768 <--> nRF51822 <--> Shield
----------||------------||--------
-  p12   <-->    p2    <-->   D2 (M_EPD_PANEL_ON)
-  p13   <-->    p3    <-->   D3 (M_EPD_BORDER)
-  p14   <-->    p4    <-->   D4 (M_/SD_CS)
-  p25   <-->    p5    <-->   D5 (M_EPD_PWM)
-  p16   <-->    p6    <-->   D6 (M_EPD_/RESET) 
-  p17   <-->    p7    <-->   D7 (M_EPD_BUSY)
-  p18   <-->    p8    <-->   D8 (M_EPD_DISCHARGE)
-  p19   <-->   p26    <-->   D9 (M_/WORD_STOCK_CS)
-  p20   <-->    p0    <-->   D10 (M_/EPD_CS)
-  p21   <-->   p27    <-->   A1 (M_OE123)
-  p22   <-->   p28    <-->   A2 (M_CKV)
-  p23   <-->   p29    <-->   A3 (M_STV_IN)
-    
-  p5   <-->    p20    <-->   MOSI
-  p6   <-->    p22    <-->   MISO
-  p7   <-->    p25    <-->   SCK
-   
-  VCC <--> VCC
-  GND <--> GND
++----------+-----------------------+
+| nRF51822 | Shield                |
+|==========|=======================|
+| p2       | D2 (M_EPD_PANEL_ON)   |
+| p3       | D3 (M_EPD_BORDER)     |
+| p4       | D4 (M_/SD_CS)         |
+| p5       | D5 (M_EPD_PWM)        |
+| p6       | D6 (M_EPD_/RESET)     |
+| p7       | D7 (M_EPD_BUSY)       |
+| p8       | D8 (M_EPD_DISCHARGE)  |
+| p26      | D9 (M_/WORD_STOCK_CS) |
+| p0       | D10 (M_/EPD_CS)       |
+| p27      | A1 (M_OE123)          |
+| p28      | A2 (M_CKV)            |
+| p29      | A3 (M_STV_IN)         |
++----------+-----------------------+
+| p20      |<-->   MOSI            |
+| p22      |<-->   MISO            |
+| p25      |<-->   SCK             |
++----------+-----------------------+
+| VCC      |<--> VCC               |
+| GND      |<--> GND               |
++----------+-----------------------+
 
 mbed nrf pin numbering also available at https://mbed.org/platforms/Nordic-nRF51822/.
 
