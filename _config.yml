@@ -1,0 +1,15 @@
+name: Nordic Pucks
+author: Nordic Semiconductor
+markdown: kramdown
+highlighter: pygments
+description: An mbed project
+baseurl: /mbed-pucks/
+github: http://www.github.com/NordicSemiconductor
+twitter: http://www.twitter.com/
+email: rnpatel[at]me.com
+disqus: diqus-username
+
+collections:
+  tutorials:
+    output: true
+  

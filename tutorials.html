@@ -1,0 +1,34 @@
+---
+layout: tutorials
+---
+
+<div class="container">
+
+</div>
+
+<div class="tutorial-container">
+  <h1>Tutorials</h1>
+  <p>Get started with puck creation.</p>
+  <br><center>
+    <a href="#"><span class="label label-danger">Photography</span></a>
+    <a href="#"><span class="label label-danger light">Coding</span></a></center>
+</div>
+
+{% for tutorial in site.tutorials %}
+
+<div class="container">
+  <div class="tutorial-box">
+    <div class="row">
+      <div class="col-md-3 project-image">
+        <img src="http://lorempixel.com/g/400/400/">
+      </div>
+      <div class="col-md-9 project-post">
+        <h1><a href="{{ tutorial.url }}">{{ tutorial.title }}</a></h1>
+        <div class="post">
+          {{ tutorial.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
