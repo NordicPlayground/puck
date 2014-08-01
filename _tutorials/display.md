@@ -21,7 +21,7 @@ This tutorial will describe how to create a Bluetooth-enabled puck with an e-pap
 We will be using an e-ink display from seeedstudio. It comes with a shield which we are going to wire onto our nrf51822.
 
 
-![](../images/display-wrapped.jpg)
+![](../images/display_wrapped.jpg)
 
 The connections we have chosen are as follows:
 
@@ -51,7 +51,7 @@ The connections we have chosen are as follows:
 
 mbed nrf pin numbering also available at https://mbed.org/platforms/Nordic-nRF51822/.
 
-![](../images/IMG_2675.jpg)
+![](../images/IMG_2675.JPG)
 
 In the future a pin adaptor might be available for the nrf51822 which will make it easier to connect arduino shields.
 
@@ -93,7 +93,7 @@ Again, because of little available memory, we can't afford the luxury of having 
 
 Now, onto the code for receiving the command instructions. When we receive an `IMAGE_BEGIN` command, we set the `receiveIndex` (the index that we will write the received data to) to the end of the image buffer. It is then written backwards into the buffer as it is received. When we receive a command that tells us all the data has been transmitted, the received segment is flipped, decompressed, and finally written to the display.
 
-![](../images/receive image data.jpg)
+![](../images/receive%20image%20data.png)
 
 << THIS IMAGE NEEDS A LEGEND TO EXPLAIN WTF RED AND ORANGEyellow is, also wut is green >>
 
