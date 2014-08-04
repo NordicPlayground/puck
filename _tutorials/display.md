@@ -4,6 +4,12 @@ title: Display Puck
 description: How to create your own Display Puck
 ---
 
+
+This tutorial is part of a tutorial series on the [Nordic Pucks].
+I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
+
+This tutorial will describe how to create a Bluetooth-enabled puck with an e-paper display. The display we have used is 264 x 176 pixels, and we're going to design a protocol which lets a connected device transmit an arbitrary black/white image to it via BLE. We will go through the necessary hardware setup, as well as the code needed to support it.
+
 # Requirements
 - 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 - 1x [E-Paper display](http://www.seeedstudio.com/depot/27-ePaper-Panel-p-1596.html?cPath=34_82)
@@ -11,10 +17,6 @@ description: How to create your own Display Puck
 - 20x [Female -> Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 - 5x [Male -> Female jumper wires](http://www.seeedstudio.com/depot/1-Pin-FemaleMale-Jumper-Wire-125mm-50pcs-pack-p-1319.html?cPath=44_47)
 
-This tutorial is part of a tutorial series on the [Nordic Pucks].
-I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
-
-This tutorial will describe how to create a Bluetooth-enabled puck with an e-paper display. The display we have used is 264 x 176 pixels, and we're going to design a protocol which lets a connected device transmit an arbitrary black/white image to it via BLE. We will go through the necessary hardware setup, as well as the code needed to support it.
 
 # Hardware
 
