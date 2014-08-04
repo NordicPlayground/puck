@@ -4,18 +4,18 @@ title: Cube Puck
 description: How to create your own Cube Puck
 ---
 
-# Requirements
-- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
-- 1x [MPU5060 IMU (Inertial measurement unit)](https://www.sparkfun.com/products/11028)
-- 2x header pins
-- 5x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
-
 This tutorial is part of a tutorial series on the [Nordic Pucks].
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
 
 In this tutorial, we will be building a cube puck, which is an innovative, new, bluetooth-enabled, situated and immersed remote control device.
 The cube puck is a six-sided cube that can be rotated to any of its six sides to invoke the semantics linked to that side.
 It is completely customizable and therefore also quite versatile.
+
+# Requirements
+- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [MPU5060 IMU (Inertial measurement unit)](https://www.sparkfun.com/products/11028)
+- 2x header pins
+- 5x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 
 
 # Creating the cube puck
