@@ -64,7 +64,9 @@ Now that the hardware is all assembled, let's get on to writing some code. We as
 
 For writing to the e-paper display we have ported an Arduino e-paper library over to mbed. This library should be included in your project. Grab it at http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/. With it included, the EPD _(Electronic Paper Display)_ can be declared with the proper pin settings:
 
-    EPD_Class EPD(p0, p2, p3, p8, p5, p6, p7);
+{% highlight cpp %}
+EPD_Class EPD(p0, p2, p3, p8, p5, p6, p7);
+{% endhighlight %}
 
 For the display, we have defined a custom bluetooth service with it's own UUID ("bftj display    "). A bluetooth UUID is 128 bits long, so we use a convention with 16 letters of 8 bit each. 'bftj' is a general prefix we've decided to use for all our pucks' UUIDs, to avoid collisions with other vendors.
 
@@ -74,23 +76,27 @@ The nrf51822 doesn't have a lot of available memory (8kb of RAM is available the
 
 To control this flow, we need to define some commands:
 
-    #define COMMAND_NOOP 0
-    #define COMMAND_CLEAR 1
-    #define COMMAND_IMAGE_UPPER 2
-    #define COMMAND_IMAGE_LOWER 3
-    #define COMMAND_BEGIN_UPPER 4
-    #define COMMAND_BEGIN_LOWER 5
+{% highlight cpp %}
+#define COMMAND_NOOP 0
+#define COMMAND_CLEAR 1
+#define COMMAND_IMAGE_UPPER 2
+#define COMMAND_IMAGE_LOWER 3
+#define COMMAND_BEGIN_UPPER 4
+#define COMMAND_BEGIN_LOWER 5
+{% endhighlight %}
 
 Each pixel in the display can only be completely black or completely white (no greys, no colors), which means we only need one bit for each pixel. This means we can stuff 8 pixels together in one byte. Since we send only half the image at a time, we need a image buffer of 2904 bytes.
 
 To reduce the amount of writes we need to do, a compression algorithm is used on the raw image data. When researching data compression algorithms, the LZ77 algorithm was found to have very little memory overhead during decompression (a plus in our memory constrained system) as well as a decent compression rate. It has a worst-case compressed file size slightly larger than the decompressed file size, so to be safe the receive buffer is initialized with a little extra room.
 
-    #define IMAGE_SIZE 2904
-    #define BUFFER_SIZE 2917
-    #define Y_SIZE 88
-    #define X_SIZE 264
-    uint8_t buffer[BUFFER_SIZE];
-    int currentCommand = COMMAND_NOOP;
+{% highlight cpp %}
+#define IMAGE_SIZE 2904
+#define BUFFER_SIZE 2917
+#define Y_SIZE 88
+#define X_SIZE 264
+uint8_t buffer[BUFFER_SIZE];
+int currentCommand = COMMAND_NOOP;
+{% endhighlight %}
 
 Again, because of little available memory, we can't afford the luxury of having separate receive and image buffers. Therefore, received data is stored at the end of the image buffer, and will be decompressed to the same space. As we use the LZ77 compression algorithm, data will be decompressed incrementally. As data is decompressed, space will be freed up in the image buffer for storing the image.
 
@@ -102,17 +108,19 @@ Now, onto the code for receiving the command instructions. When we receive an `I
 
 The code for this is as follows. Most of the magic here is happening inside the lz-compression, which we will not be looking into. The decompressed image is then flashed to the display.
 
-    case COMMAND_IMAGE_UPPER:
-        LOG_INFO("Writing image to top half of display.\n");
-        reverseBufferSegment(receiveIndex, BUFFER_SIZE);
-        LZ_Uncompress(buffer + receiveIndex, buffer, BUFFER_SIZE - receiveIndex);
-        LOG_INFO("Uncompressed %i bytes of data.\n", BUFFER_SIZE - receiveIndex);
-        EPD.begin(EPD_2_7);
-        EPD.start();
-        EPD.image(buffer, 0, EPD.lines_per_display / 2);
-        EPD.end();
-        break;
-        
+{% highlight cpp %}
+case COMMAND_IMAGE_UPPER:
+    LOG_INFO("Writing image to top half of display.\n");
+    reverseBufferSegment(receiveIndex, BUFFER_SIZE);
+    LZ_Uncompress(buffer + receiveIndex, buffer, BUFFER_SIZE - receiveIndex);
+    LOG_INFO("Uncompressed %i bytes of data.\n", BUFFER_SIZE - receiveIndex);
+    EPD.begin(EPD_2_7);
+    EPD.start();
+    EPD.image(buffer, 0, EPD.lines_per_display / 2);
+    EPD.end();
+    break;
+{% endhighlight %}
+
 The code for flashing the lower half is more or less the same, with the exception of the coordinates we pass to the EPD.image method.
 
 Next, receiving the data itself. Each time we write to the data characteristic, we can send 20 bytes. All we really need is a callback for the data characteristic write, which stores the received bytes in the receive buffer.
@@ -121,27 +129,37 @@ Now that we've got the methods for handling data transfer ready, let's hook it a
 
 First, some setup for the display: (SOMEONE EXPLAIN THIS?!?!)
 
-    int main() {
-        DigitalOut SD_CS(p4);
-        DigitalOut WORD_STOCK_CS(p26);
-        
-        SD_CS = 1;
-        WORD_STOCK_CS = 1;
+{% highlight cpp %}
+int main() {
+    DigitalOut SD_CS(p4);
+    DigitalOut WORD_STOCK_CS(p26);
+    
+    SD_CS = 1;
+    WORD_STOCK_CS = 1;
+{% endhighlight %}
 
 Next, we need to let the puck library know which characteristics we want to use.
 
-    puck->addCharacteristic(DISPLAY_SERVICE_UUID, COMMAND_UUID, 1);
-    puck->addCharacteristic(DISPLAY_SERVICE_UUID, DATA_UUID, 20);
+{% highlight cpp %}
+puck->addCharacteristic(DISPLAY_SERVICE_UUID, COMMAND_UUID, 1);
+puck->addCharacteristic(DISPLAY_SERVICE_UUID, DATA_UUID, 20);
+{% endhighlight %}
 
 And what we want to do when they are written to
 
-    puck->onCharacteristicWrite(&COMMAND_UUID, onCommandWritten);
-    puck->onCharacteristicWrite(&DATA_UUID, onDataWritten);
+{% highlight cpp %}
+puck->onCharacteristicWrite(&COMMAND_UUID, onCommandWritten);
+puck->onCharacteristicWrite(&DATA_UUID, onDataWritten);
+{% endhighlight %}
 
 Then, we only need to tell the puck to start adveritising.
 
-    puck->init(0x5EED);
+{% highlight cpp %}
+puck->init(0x5EED);
+{% endhighlight %}
 
 Finally, we keep the puck alive in a while loop
 
-    while (puck->drive());
+{% highlight cpp %}
+while (puck->drive());
+{% endhighlight %}
