@@ -13,6 +13,7 @@ It is completely customizable and therefore also quite versatile.
 
 
 ![](http://www.finefurniture.co/images/V184B.JPG)
+
 > *Artist's rendition of what a cube might look like.*
 
 # Requirements
