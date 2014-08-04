@@ -10,7 +10,7 @@ I am assuming that you have already read the [introduction tutorial] and the [lo
 In this tutorial, we will be building an IR puck, which is a puck that can mimic arbitrary infrared remote controls.
 This is useful for controlling things like TVs, radios, airconditioners, window blinds, and just about anything and everything that can be otherwise be controlled by a regular remote control.
 
-#Requirements
+# Requirements
 - 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 - 3x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 
@@ -87,9 +87,10 @@ We have written a working example program for an IR puck that you can use direct
 Our program is available at [mbed dot org]. It uses our [Puck library], a convenience wrapper library that makes it easy to make Pucks.
 You can read more about the library in our [nice in-depth library article], but it is not required to be able to use it efficiently.
 
-Here is the annotated code of the IR puck:
+# Software
 
 Main.c
+
     #include "mbed.h"
 
 Virtually all mbed programs start with including mbed.h, which is the mbed library.
