@@ -71,6 +71,7 @@ p
   text-decoration:none
 }
 
+
 #wrapper
 {
   padding-left:250px;
@@ -220,6 +221,11 @@ blockquote
 
 blockquote p {
   font-size: 14px; 
+}
+
+
+blockquote table {
+  margin: 10px auto;
 }
 
 ul,ol
