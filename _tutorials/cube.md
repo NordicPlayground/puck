@@ -21,29 +21,33 @@ It is completely customizable and therefore also quite versatile.
 # Creating the cube puck
 Finished program available at http://mbed.org/teams/Nordic-Pucks/code/cube-puck/.
 
-## Hardware:
+## Hardware
+
+The cube puck consists of an MPU5060 Intertial Measurement Unit wired together to an nrf51822 mbed.
+We are going to use the IMU to determine on which side the cube is currently resting.
 The MPU5060 IMU comes pre-soldered onto a breakout board, so we will need to connect it to our mbed using wires.
 We soldered some header pins to our IMU breakout board to allow easy wire connection, but you can also solder your wires directly onto the through-holes.
 
 ![](../images/2014-07-30 16.52.09.jpg)
 
-For this application we will need to set up a TWI (I2C) connection (a simple two-wire bus interface) between the mbed board and the MPU5060, as well as connect power and ground.
+
+In order to communicate with the MPU5060, will need to set up a TWI (I2C) connection (a simple two-wire bus interface) between the mbed board and the MPU5060, as well as connect power and ground.
 The following table shows the wire mappings used in this project.
 The MPU5060 also supports interrupts using the INT pin, but we will not be using it in this tutorial.
 
-    |-------------------|---------------|-------|
-    | mbed nRF pin      | MPU5060 pin   |       |
-    |-------------------|---------------|-------|
-    | VCC               | VDD           |       |
-    |-------------------|---------------|-------|
-    | VCC               | VIO           |       |
-    |-------------------|---------------|-------|
-    | GND               | GND           |       |
-    |-------------------|---------------|-------|
-    | I2C               | SDA1 (Pin 13) | SDA   |
-    |-------------------|---------------|-------|
-    | I2C               | SCL1 (Pin 15) | SCL   |
-    |-------------------|---------------|-------|
+    |-------------------|---------------|
+    | mbed nRF pin      | MPU5060 pin   |
+    |-------------------|---------------|
+    | VCC               | VDD           |
+    |-------------------|---------------|
+    | VCC               | VIO           |
+    |-------------------|---------------|
+    | GND               | GND           |
+    |-------------------|---------------|
+    | I2C SDA1 (Pin 13) | SDA           |
+    |-------------------|---------------|
+    | I2C SCL1 (Pin 15) | SCL           |
+    |-------------------|---------------|
 
 MPU5060 wiring:
 
@@ -53,8 +57,10 @@ mbed with finished wiring:
 
 ![](../images/2014-07-30 16.53.24.jpg)
 
-## Software:
+## Software
+
 ### Basic setup
+
 Now that the hardware is all assembled, let's get on to writing some code.
 We assume you've already read the <LINK Location Puck> tutorial.
 We're going to use the same Puck library for the display, so we create a new project and set it up just like the location puck.
