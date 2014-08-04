@@ -29,7 +29,7 @@ The connections we have chosen are as follows:
 
 |----------+-----------------------|
 | nRF51822 | Shield                |
-|==========+=======================|
+|----------+-----------------------|
 | p2       | D2 (M_EPD_PANEL_ON)   |
 | p3       | D3 (M_EPD_BORDER)     |
 | p4       | D4 (M_/SD_CS)         |

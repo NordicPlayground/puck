@@ -690,6 +690,12 @@ time
   color:#3a3a3a
 }
 
+td, th
+{
+  border: 1px solid #000;
+  padding: 2px;
+}
+
 @media (max-width:767px) {
 
 #wrapper {
