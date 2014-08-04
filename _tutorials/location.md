@@ -4,12 +4,13 @@ title: Location Puck
 description: How to create your own Location Puck
 ---
 
-# Requirements
-- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
-
 This tutorial will teach you how to set up a location puck - the basic puck that all of our other pucks are based upon.
 If you are not familiar with pucks or our project, please read our introductory post here: <#link to post#>.
 In short, a puck is a Bluetooth Low Energy-powered device that will, using your smartphone as a central hub, work as a building block for your Internet-of-Things-related needs. 
+
+# Requirements
+- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+
 
 _TODO: shopping list of things you need_
 
