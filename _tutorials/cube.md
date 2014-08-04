@@ -74,8 +74,10 @@ Import the library and include it in your main.cpp file.
 IMU setup and initialization
 Include the MPU5060 header and create an MPU5060 object.
 
-    #include "MPU6050.h"
-    MPU6050 mpu;
+{% highlight cpp %}
+#include "MPU6050.h"
+MPU6050 mpu;
+{% endhighlight %}
 
 Now initialize the MPU in the main function main.cpp.
 After the call to initialize() we test the MPU connection by calling testConnection().
@@ -84,17 +86,19 @@ Sometimes false is returned, to fix this you should power cycle the mbed, leavin
 
 TODO is it enough to power cycle the mpu? or just call mpu.initialize() again?
 
-    int main() {
-        LOG_VERBOSE("MPU6050 test startup:\n");
-        mpu.initialize();
-        LOG_VERBOSE("TestConnection\n");
-        if (mpu.testConnection()) {
-            LOG_INFO("MPU initialized.\n");
-        } else {
-            LOG_ERROR("MPU not properly initialized!\n");
-        }
-        ....
+{% highlight cpp %}
+int main() {
+    LOG_VERBOSE("MPU6050 test startup:\n");
+    mpu.initialize();
+    LOG_VERBOSE("TestConnection\n");
+    if (mpu.testConnection()) {
+        LOG_INFO("MPU initialized.\n");
+    } else {
+        LOG_ERROR("MPU not properly initialized!\n");
     }
+    ....
+}
+{% endhighlight %}
 
 Now we can get readings from the MPU.
 
@@ -104,18 +108,22 @@ Think of a gatt service as an object exposed over bluetooth LE, with gatt charac
 
 Set up the following UUIDs for our service.
 
-    const UUID CUBE_SERVICE_UUID = stringToUUID("bftj cube       ");
-    const UUID DIRECTION_UUID = stringToUUID("bftj cube dirctn");
+{% highlight cpp %}
+const UUID CUBE_SERVICE_UUID = stringToUUID("bftj cube       ");
+const UUID DIRECTION_UUID = stringToUUID("bftj cube dirctn");
+{% endhighlight %}
 
 Now add the characteristic to the puck via the following.
 This will create the gatt service "bftj cube       " if it doesn't exist, and add the direction characteristic "bftj cube dirctn" to it. The DIRECTION_UUID is a 1 byte value.
 
-    int characteristicValueLength = 1;
-    puck->addCharacteristic(
-            CUBE_SERVICE_UUID,
-            DIRECTION_UUID,
-            characteristicValueLength,
-            GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ | GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY);
+{% highlight cpp %}
+int characteristicValueLength = 1;
+puck->addCharacteristic(
+        CUBE_SERVICE_UUID,
+        DIRECTION_UUID,
+        characteristicValueLength,
+        GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_READ | GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_NOTIFY);
+{% endhighlight %}
 
 We have given the characteristic the following properties:
 
@@ -124,68 +132,80 @@ We have given the characteristic the following properties:
 
 Now we can initialize the puck.
 
-    puck->init(0xC0BE);
+{% highlight cpp %}
+puck->init(0xC0BE);
+{% endhighlight %}
 
 Congratulations. You now have an mbed providing the cube service. Next up, getting some values up there.
 
 Harvest data from IMU and update gatt attribute
 This section will walk through how we can use the MPU library to determine our cube's rotation.
 
-    void updateCubeDirection(void) {
+{% highlight cpp %}
+void updateCubeDirection(void) {
 
-        int16_t ax, ay, az;
-        int16_t gx, gy, gz;
+    int16_t ax, ay, az;
+    int16_t gx, gy, gz;
 
-    ...
+...
 
-        mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-    }
+    mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+}
+{% endhighlight %}
 
 Using the MPU library, all we need to do is call mpu.getMotion6 to read the current 6-axis motion data from the IMU.
 The six variables ax, ay, az, gx, gy and gz, which hold the accelerometer x, y, and z directions, and the gyroscope x, y, and z directions, respectively, are passed by reference to the library function so they can be populated with the correct data.
 Of the acquired data, we're only actually going to use the accelerometer data, as it is sufficient for obtaining the cube direction.
 
-    int16_t x = direction_if_exited(ax);
-    int16_t y = direction_if_exited(ay);
-    int16_t z = direction_if_exited(az);
+{% highlight cpp %}
+int16_t x = direction_if_exited(ax);
+int16_t y = direction_if_exited(ay);
+int16_t z = direction_if_exited(az);
+{% endhighlight %}
 
 Next, we normalize the acceleration data to a more discretized set of values (-1, 0, 1) based on the thresholding function direction_if_exited.
 This helps us filter out some the noise from the IMU sensors.
 
-    int16_t sum = abs(x) + abs(y) + abs(z);
-    if (sum != 1) {
-        return;
-    }
+{% highlight cpp %}
+int16_t sum = abs(x) + abs(y) + abs(z);
+if (sum != 1) {
+    return;
+}
+{% endhighlight %}
 
 Based on the normalized data, we can make a qualified assumption as to whether or not there is enough data to determine a direction.
 
-    Direction new_direction = UNDEFINED;
-    if (z == 1) {
-        new_direction = UP;
-    } else if (z == -1) {
-        new_direction = DOWN;
-    } else if (y == 1) {
-        new_direction = LEFT;
-    } else if (y == -1) {
-        new_direction = RIGHT;
-    } else if (x == 1) {
-        new_direction = BACK;
-    } else if (x == -1) {
-        new_direction = FRONT;
-    }
+{% highlight cpp %}
+Direction new_direction = UNDEFINED;
+if (z == 1) {
+    new_direction = UP;
+} else if (z == -1) {
+    new_direction = DOWN;
+} else if (y == 1) {
+    new_direction = LEFT;
+} else if (y == -1) {
+    new_direction = RIGHT;
+} else if (x == 1) {
+    new_direction = BACK;
+} else if (x == -1) {
+    new_direction = FRONT;
+}
+{% endhighlight %}
 
 Based on the values read, we can assign a direction.
 
-    if (direction == new_direction) {
-        return;
-    }
+{% highlight cpp %}
+if (direction == new_direction) {
+    return;
+}
 
-    direction = new_direction;
+direction = new_direction;
 
-    log_direction(direction);
-    uint8_t directionAsInteger = direction;
-    int length = 1;
-    puck->updateCharacteristicValue(DIRECTION_UUID, &directionAsInteger, length);
+log_direction(direction);
+uint8_t directionAsInteger = direction;
+int length = 1;
+puck->updateCharacteristicValue(DIRECTION_UUID, &directionAsInteger, length);
+{% endhighlight %}
 
 If the direction was different than the previous direction, we update the program state, and change the value of the direction characteristic.
 This will cause any Bluetooth devices listening for changes to get a notification.
