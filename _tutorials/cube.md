@@ -34,20 +34,21 @@ In order to communicate with the MPU5060, will need to set up a TWI (I2C) connec
 The following table shows the wire mappings used in this project.
 The MPU5060 also supports interrupts using the INT pin, but we will not be using it in this tutorial.
 
-|-------------------|---------------|
-| mbed nRF pin      | MPU5060 pin   |
-|-------------------|---------------|
-| VCC               | VDD           |
-|-------------------|---------------|
-| VCC               | VIO           |
-|-------------------|---------------|
-| GND               | GND           |
-|-------------------|---------------|
-| I2C SDA1 (Pin 13) | SDA           |
-|-------------------|---------------|
-| I2C SCL1 (Pin 15) | SCL           |
-|-------------------|---------------|
-
+> |-------------------|---------------|
+> | mbed nRF pin      | MPU5060 pin   |
+> |-------------------|---------------|
+> | VCC               | VDD           |
+> |-------------------|---------------|
+> | VCC               | VIO           |
+> |-------------------|---------------|
+> | GND               | GND           |
+> |-------------------|---------------|
+> | I2C SDA1 (Pin 13) | SDA           |
+> |-------------------|---------------|
+> | I2C SCL1 (Pin 15) | SCL           |
+> |-------------------|---------------|
+>
+> Mbed/MPU5060 wiring overview.
 
 > ![](../images/2014-07-30 16.51.07.jpg)
 > MPU5060 wiring.
