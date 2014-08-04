@@ -9,7 +9,7 @@ image: http://lorempixel.com/g/400/400/
 
 At the core of all the pucks, and acting as the central, giving the pucks access to the outside world (the internet), is your smart phone.
 
-[Picture of puck architecture]
+![](/mbed-pucks/images/whiteboard_2.jpg)
 
 Your (Bluetooth LE compliant) smart phone can connect to all of these devices by running either the Android or iOS app that we've developed (known as Evere), or your own client-side application.
 From Evere you can subscribe to Puck events such as entering or leaving a zone, and triggering reactions thereupon. For example, entering your home library might set your phone to silent mode.
