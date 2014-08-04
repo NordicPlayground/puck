@@ -61,7 +61,7 @@ In the future a pin adaptor might be available for the nrf51822 which will make 
 
 Now that the hardware is all assembled, let's get on to writing some code. We assume you've already read the [Location Puck tutorial]. We're going to use the same Puck library for the display, so we create a new project and set it up just like the location puck.
 
-For writing to the e-paper display we have ported an Arduino e-paper library over to mbed. This library should be included in your project. Grab it at http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/. With it included, the EPD (_E_lectronic _P_paper _Display_) can be declared with the proper pin settings:
+For writing to the e-paper display we have ported an Arduino e-paper library over to mbed. This library should be included in your project. Grab it at http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/. With it included, the EPD _(Electronic Paper Display)_ can be declared with the proper pin settings:
 
     EPD_Class EPD(p0, p2, p3, p8, p5, p6, p7);
 
