@@ -5,11 +5,11 @@ description: How to create your own Display Puck
 ---
 
 # Requirements
-- 1x Nordic nrf51822 mbed mKIT development board https://mbed.org/platforms/Nordic-nRF51822/
-- 1x E-Paper display http://www.seeedstudio.com/depot/27-ePaper-Panel-p-1596.html?cPath=34_82
-- 1x E-Paper shield http://www.seeedstudio.com/depot/Small-epaper-Shield-p-1597.html
-- 20x Female -> Female jumper wires http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47
-- 5x Male -> Female jumper wires http://www.seeedstudio.com/depot/1-Pin-FemaleMale-Jumper-Wire-125mm-50pcs-pack-p-1319.html?cPath=44_47
+- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [E-Paper display](http://www.seeedstudio.com/depot/27-ePaper-Panel-p-1596.html?cPath=34_82)
+- 1x [E-Paper shield](http://www.seeedstudio.com/depot/Small-epaper-Shield-p-1597.html)
+- 20x [Female -> Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
+- 5x [Male -> Female jumper wires](http://www.seeedstudio.com/depot/1-Pin-FemaleMale-Jumper-Wire-125mm-50pcs-pack-p-1319.html?cPath=44_47)
 
 This tutorial is part of a tutorial series on the [Nordic Pucks].
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
