@@ -5,10 +5,10 @@ description: How to create your own Cube Puck
 ---
 
 # Requirements
-- 1x Nordic nrf51822 mbed mKIT development board https://mbed.org/platforms/Nordic-nRF51822/
-- 1x MPU5060 IMU (Inertial measurement unit) https://www.sparkfun.com/products/11028
+- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [MPU5060 IMU (Inertial measurement unit)](https://www.sparkfun.com/products/11028)
 - 2x header pins
-- 5x Female to Female jumper wires http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47
+- 5x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 
 This tutorial is part of a tutorial series on the [Nordic Pucks].
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
