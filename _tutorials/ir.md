@@ -5,8 +5,8 @@ description: How to create your own IR Puck
 ---
 
 #Requirements
-- 1x Nordic nrf51822 mbed mKIT development boardhttps://mbed.org/platforms/Nordic-nRF51822/
-- 3x Female to Female jumper wires http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47
+- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 3x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 
 ### For custom IR sender
 - IR led
