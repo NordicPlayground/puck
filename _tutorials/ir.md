@@ -156,31 +156,41 @@ It simply calls fireIRCode using the current values of the different characteris
 
 The program entry point.
 
-    puck->addCharacteristic(IR_SERVICE_UUID, HEADER_UUID, 4);
-    puck->addCharacteristic(IR_SERVICE_UUID, ONE_UUID, 4);
-    puck->addCharacteristic(IR_SERVICE_UUID, ZERO_UUID, 4);
-    puck->addCharacteristic(IR_SERVICE_UUID, PTRAIL_UUID, 2);
-    puck->addCharacteristic(IR_SERVICE_UUID, PREDATA_UUID, 2);
-    puck->addCharacteristic(IR_SERVICE_UUID, CODE_UUID, 2);
+{% highlight cpp %}
+puck->addCharacteristic(IR_SERVICE_UUID, HEADER_UUID, 4);
+puck->addCharacteristic(IR_SERVICE_UUID, ONE_UUID, 4);
+puck->addCharacteristic(IR_SERVICE_UUID, ZERO_UUID, 4);
+puck->addCharacteristic(IR_SERVICE_UUID, PTRAIL_UUID, 2);
+puck->addCharacteristic(IR_SERVICE_UUID, PREDATA_UUID, 2);
+puck->addCharacteristic(IR_SERVICE_UUID, CODE_UUID, 2);
+{% endhighlight %}
 
 Here we tell the puck library which characteristics we want to offer over bluetooth, and which service(s) they belong to.
 The last argument of the addCharacteristic function call tells the puck library how many bytes the characteristic should be. This can be any number from 1 to 20.
 
-    puck->init(0xABBA);
+{% highlight cpp %}
+puck->init(0xABBA);
+{% endhighlight %}
 
 Once all the characteristics have been added (but not before), the puck can be initialized.
 This lets the puck library know that it can start performing some low-level start-up and house-cleaning.
 The argument is the puck's identification number used for the location features of the puck.
 Each location needs a unique identification code, which can be anywhere between 0 and 0xFFFF. Once init has been called, we are ready to start the main loop of the program.
 
-    puck->onCharacteristicWrite(CODE_UUID, onIRCodeWrite);
+{% highlight cpp %}
+puck->onCharacteristicWrite(CODE_UUID, onIRCodeWrite);
+{% endhighlight %}
 
 Here we tell the puck library that we want the onIRCodeWrite function to be called whenever someone writes to the ir code characteristic over bluetooth.
 
-    while (puck->drive());
+{% highlight cpp %}
+while (puck->drive());
+{% endhighlight %}
 
 Finally, when everything is initialized, hooked up and ready, we can run the main loop of the program.
 In order to let the puck and bluetooth stack do its business, puck->drive() should be called periodically.
 If you have some custom logic that wants to be polled regularly, this is the place you would put it, but for this example, all the necessary logic is contained within the puck library.
 
-    }
+{% highlight cpp %}
+}
+{% endhighlight %}
