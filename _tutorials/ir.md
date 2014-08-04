@@ -21,9 +21,8 @@ This is useful for controlling things like TVs, radios, airconditioners, window 
 -  Soldering iron / solder
 Something to solder on
 
-(TODO: replace all images)
-
-
+This tutorial is part of a tutorial series on the [Nordic Pucks].
+I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
 This is what the puck looks like: [image].
 
@@ -68,7 +67,7 @@ When the base is driven high the collector and emitter circuit is connected and 
 In our case this means that the LED will start lighting.
 Our IR puck uses PIN14 to drive the LED signal. You can see our circuit drawing below.
 
-ir_module.PNG 
+![](../images/ir_module.PNG)
 
 Our LED needed a 5 ohm resistor so we used two 10 ohm resistors in parallel.
 Be sure to check your own LED to make sure it doesn't break.
@@ -76,12 +75,12 @@ Another noteworthy thing is that you should use thru-hole resistors for the LED 
 
 Here you can see our implementation of this circuit board we used for our IR puck.
 
-Slack for iOS Upload.jpg
+![](../images/Slack for iOS Upload.jpg)
 
 The green wire in connected to PIN14, the black to VCC and the red to GND.
 Here you can see our drawing for this specific implementation.
 
-Slack for iOS Upload (1).jpg
+![](../images/Slack for iOS Upload (1).jpg)
 
 Once you have soldered up everything and connected all the wires, you are ready to flash the mbed with the IR puck program.
 We have written a working example program for an IR puck that you can use directly, or you can tweak it to your needs or even write your own.
