@@ -11,10 +11,8 @@ In this tutorial, we will be building a cube puck, which is an innovative, new, 
 The cube puck is a six-sided cube that can be rotated to any of its six sides to invoke the semantics linked to that side.
 It is completely customizable and therefore also quite versatile.
 
-
-![](http://www.finefurniture.co/images/V184B.JPG)
-
-> *Artist's rendition of what a cube might look like.*
+> ![](http://www.finefurniture.co/images/V184B.JPG)
+> Artist's rendition of what a cube might look like.
 
 # Requirements
 - 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
@@ -30,8 +28,7 @@ We are going to use the IMU to determine on which side the cube is currently res
 The MPU5060 IMU comes pre-soldered onto a breakout board, so we will need to connect it to our mbed using wires.
 We soldered some header pins to our IMU breakout board to allow easy wire connection, but you can also solder your wires directly onto the through-holes.
 
-![](../images/2014-07-30 16.52.09.jpg)
-
+> ![](../images/2014-07-30 16.52.09.jpg)
 
 In order to communicate with the MPU5060, will need to set up a TWI (I2C) connection (a simple two-wire bus interface) between the mbed board and the MPU5060, as well as connect power and ground.
 The following table shows the wire mappings used in this project.
@@ -51,14 +48,13 @@ The MPU5060 also supports interrupts using the INT pin, but we will not be using
 | I2C SCL1 (Pin 15) | SCL           |
 |-------------------|---------------|
 
-MPU5060 wiring:
 
-![](../images/2014-07-30 16.51.07.jpg)
+> ![](../images/2014-07-30 16.51.07.jpg)
+> MPU5060 wiring.
 
-mbed with finished wiring:
 
-![](../images/2014-07-30 16.53.24.jpg)
-
+> ![](../images/2014-07-30 16.53.24.jpg)
+> Mbed with finished wiring.
 
 # Software
 
@@ -71,9 +67,8 @@ The only difference from the original is that this library has changed the I2C p
 
 Import the library and include it in your main.cpp file.
 
-![](../images/MPU library.PNG)
-
-The library to import
+> ![](../images/MPU library.PNG)
+> The library to import.
 
 IMU setup and initialization
 Include the MPU5060 header and create an MPU5060 object.
