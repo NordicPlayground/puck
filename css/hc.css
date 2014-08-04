@@ -215,12 +215,12 @@ blockquote
   margin-right:-40px;
   padding-left:40px;
   background:#f3f3f7;
-  font-style: italic;
   text-align: center;
 }
 
 blockquote p {
-  font-size: 14px; 
+  font-size: 14px;
+  font-style: italic;
 }
 
 
