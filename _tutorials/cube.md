@@ -11,8 +11,9 @@ In this tutorial, we will be building a cube puck, which is an innovative, new, 
 The cube puck is a six-sided cube that can be rotated to any of its six sides to invoke the semantics linked to that side.
 It is completely customizable and therefore also quite versatile.
 
+
 ![](http://www.finefurniture.co/images/V184B.JPG)
-*Artist's rendition of what a cube might look like.*
+> *Artist's rendition of what a cube might look like.*
 
 # Requirements
 - 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
