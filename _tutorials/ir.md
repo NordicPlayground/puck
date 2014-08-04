@@ -2,6 +2,7 @@
 layout: tutorial
 title: IR Puck
 description: How to create your own IR Puck
+image: http://lorempixel.com/g/400/400/
 ---
 
 This tutorial is part of a tutorial series on the [Nordic Pucks].

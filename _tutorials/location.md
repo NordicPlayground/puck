@@ -2,6 +2,7 @@
 layout: tutorial
 title: Location Puck
 description: How to create your own Location Puck
+image: http://lorempixel.com/g/400/400/
 ---
 
 This tutorial will teach you how to set up a location puck - the basic puck that all of our other pucks are based upon.
