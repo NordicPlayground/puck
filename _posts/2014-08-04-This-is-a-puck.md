@@ -5,6 +5,8 @@ title: This is a puck
 
 Say you're sitting in your lounge at home, thinking how relaxing some smooth jazz would be right now.
 
+![](/mbed-pucks/images/smooth_jazz.jpg)
+
 What if you could have smooth jazz at your choice of location, without the hassle of turning the music on yourself?
 
 Luckily you've recently accuired one of the new Nordic Semiconductor mBed BLE-Smart enabled ARM chips, and find yourself equipped with a laptop with the mBed online compiler open in a tab. You've heard of iBeacons, maybe you could program your smartphone to automatically start playing Take Five ([Dave Brubeck – Take Five](http://open.spotify.com/track/5p6me2mwQrGfH30eExHn6v)) whenever your phone enters the lounge area, identified by a part of the iBeacon broadcast identifier.
