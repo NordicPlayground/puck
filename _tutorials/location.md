@@ -28,6 +28,7 @@ Compiling your code at mbed.org will download a .hex file to your computer, whic
 The mbed will flash its lights for a few seconds, and afterwards you will need to press the reset button in order to start your newly transferred (flashed) program.
 
 First go to http://www.mbed.org - you will be presented with a page looking like this:
+
 > ![](../images/mbed_login_signup.PNG)
 
 Press the login or signup button and create yourself a user account.
