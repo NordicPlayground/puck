@@ -23,7 +23,8 @@ This tutorial will describe how to create a Bluetooth-enabled puck with an e-pap
 We will be using an e-ink display from seeedstudio. It comes with a shield which we are going to wire onto our nrf51822.
 
 
-![](../images/display_wrapped.jpg)
+> ![](../images/display_wrapped.jpg)
+> The display as it comes from seeedstudio.
 
 The connections we have chosen are as follows:
 
