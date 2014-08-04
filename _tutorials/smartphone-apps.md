@@ -1,3 +1,10 @@
+---
+layout: tutorial
+title: Introduction to Evere (smartphone companion application)
+description: How to use the smartphone applications for iOS and Android to create your own rules.
+image: http://lorempixel.com/g/400/400/
+---
+
 # Introduction
 
 At the core of all the pucks, and acting as the central, giving the pucks access to the outside world (the internet), is your smart phone.
