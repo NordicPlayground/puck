@@ -114,7 +114,7 @@ Here we have chosen LOG_LEVEL_INFO, which is useful for testing and verifying th
 Other valid settings are LOG_LEVEL_VERBOSE, LOG_LEVEL_DEBUG, LOG_LEVEL_WARN and LOG_LEVEL_ERROR.
 
 {% highlight cpp %}
-Puck* puck = &Puck::getPuck();
+Puck *puck = &Puck::getPuck();
 {% endhighlight %}
 
 This is how you get a reference to the Puck object from the puck library.
