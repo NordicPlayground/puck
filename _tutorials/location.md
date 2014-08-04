@@ -5,7 +5,7 @@ description: How to create your own Location Puck
 ---
 
 # Requirements
-- 1x Nordic nrf51822 mbed mKIT development board https://mbed.org/platforms/Nordic-nRF51822/
+- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 
 This tutorial will teach you how to set up a location puck - the basic puck that all of our other pucks are based upon.
 If you are not familiar with pucks or our project, please read our introductory post here: <#link to post#>.
