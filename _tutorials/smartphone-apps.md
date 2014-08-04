@@ -37,21 +37,25 @@ When Evere notices that an event has triggered for a certain puck, the applicati
 The available triggers for a given Puck depend on what features the puck advertises that it supports. Here follows a concise overview of the currently supported triggers.
 
 All Pucks (includes Location Puck, Cube Puck, IR Puck, Display Puck):
+
 - Enter location
 - Leave location
 
 Cube Puck:
+
 - Rotation change (separate triggers for up, down, left, right, front, back)
 
 ## Actions
 
 Evere comes preloaded with a number of actuators that can be triggered via rules, including the following:
+
 - Play music from spotify
 - Change phone state (silent, vibrate, volume)
 - Change music volume
 - Post data to webpages.
 
 If a Display Puck or IR Puck is present, two additional actuators will appear:
+
 - Send IR Signal
 - Send Image / Text
 
@@ -66,6 +70,7 @@ You can also create your own actuators. Read more about this in the [ Applicatio
 ### Adding a rule on Android
 
 Adding a rule is pretty simple:
+
 - Click the 'add' icon on the action bar
 - Select which Puck to add a rule for
 - Select an event (trigger) to listen for
