@@ -25,9 +25,9 @@ We will be using an e-ink display from seeedstudio. It comes with a shield which
 
 The connections we have chosen are as follows:
 
-+----------+-----------------------+
+|----------+-----------------------|
 | nRF51822 | Shield                |
-|==========|=======================|
+|==========+=======================|
 | p2       | D2 (M_EPD_PANEL_ON)   |
 | p3       | D3 (M_EPD_BORDER)     |
 | p4       | D4 (M_/SD_CS)         |
@@ -40,14 +40,14 @@ The connections we have chosen are as follows:
 | p27      | A1 (M_OE123)          |
 | p28      | A2 (M_CKV)            |
 | p29      | A3 (M_STV_IN)         |
-+----------+-----------------------+
+|----------+-----------------------|
 | p20      |<-->   MOSI            |
 | p22      |<-->   MISO            |
 | p25      |<-->   SCK             |
-+----------+-----------------------+
+|----------+-----------------------|
 | VCC      |<--> VCC               |
 | GND      |<--> GND               |
-+----------+-----------------------+
+|----------+-----------------------|
 
 mbed nrf pin numbering also available at https://mbed.org/platforms/Nordic-nRF51822/.
 
