@@ -91,33 +91,43 @@ You can read more about the library in our [nice in-depth library article], but 
 
 Main.c
 
-    #include "mbed.h"
+{% highlight cpp %}
+#include "mbed.h"
+{% endhighlight %}
 
 Virtually all mbed programs start with including mbed.h, which is the mbed library.
 
-    #include "IR.h"
+{% highlight cpp %}
+#include "IR.h"
+{% endhighlight %}
 
 The IR-specific logic is in a separate file to keep things organized, so we need to include IR.h to make sure we can call that logic from our main program.
 
-    #define LOG_LEVEL_INFO
-    #include "Puck.h"
+{% highlight cpp %}
+#define LOG_LEVEL_INFO
+#include "Puck.h"
+{% endhighlight %}
 
 Since we're making a Puck, we're going to use our Puck wrapper library.
 We can configure the amount of logging the puck library will do for us using the LOG_LEVEL_* directives, which you can read more about in the [puck library tutorial].
 Here we have chosen LOG_LEVEL_INFO, which is useful for testing and verifying that the puck is functional, but when development is complete, you should switch to LOG_LEVEL_NONE to increase performance and reduce battery usage.
 Other valid settings are LOG_LEVEL_VERBOSE, LOG_LEVEL_DEBUG, LOG_LEVEL_WARN and LOG_LEVEL_ERROR.
 
-    Puck* puck = &Puck::getPuck();
+{% highlight cpp %}
+Puck* puck = &Puck::getPuck();
+{% endhighlight %}
 
 This is how you get a reference to the Puck object from the puck library.
 
-    const UUID IR_SERVICE_UUID = stringToUUID("bftj ir ");
-    const UUID HEADER_UUID = stringToUUID("bftj ir header ");
-    const UUID ONE_UUID = stringToUUID("bftj ir one ");
-    const UUID ZERO_UUID = stringToUUID("bftj ir zero ");
-    const UUID PTRAIL_UUID = stringToUUID("bftj ir ptrail ");
-    const UUID PREDATA_UUID = stringToUUID("bftj ir predata ");
-    const UUID CODE_UUID = stringToUUID("bftj ir code ");
+{% highlight cpp %}
+const UUID IR_SERVICE_UUID = stringToUUID("bftj ir ");
+const UUID HEADER_UUID = stringToUUID("bftj ir header ");
+const UUID ONE_UUID = stringToUUID("bftj ir one ");
+const UUID ZERO_UUID = stringToUUID("bftj ir zero ");
+const UUID PTRAIL_UUID = stringToUUID("bftj ir ptrail ");
+const UUID PREDATA_UUID = stringToUUID("bftj ir predata ");
+const UUID CODE_UUID = stringToUUID("bftj ir code ");
+{% endhighlight %}
 
 Here we define the different UUIDs of the services and characteristics we intend to use.
 For more information about how services and characteristics work, check out our [BLE tutorial].
@@ -138,21 +148,25 @@ Some controls have predata that comes before the header
 - Code
 What code that the remote is going to send out. Apple play: 0x04 
 
-    void onIRCodeWrite(uint8_t* value) {
-        LOG_INFO("Going to fire IR code...\n");
-        fireIRCode(puck->getCharacteristicValue(HEADER_UUID),
-            puck->getCharacteristicValue(ONE_UUID), 
-            puck->getCharacteristicValue(ZERO_UUID),
-            puck->getCharacteristicValue(PTRAIL_UUID),
-            puck->getCharacteristicValue(PREDATA_UUID),
-            puck->getCharacteristicValue(CODE_UUID));
-        LOG_INFO("Fire complete!\n");
-    }
+{% highlight cpp %}
+void onIRCodeWrite(uint8_t* value) {
+    LOG_INFO("Going to fire IR code...\n");
+    fireIRCode(puck->getCharacteristicValue(HEADER_UUID),
+        puck->getCharacteristicValue(ONE_UUID), 
+        puck->getCharacteristicValue(ZERO_UUID),
+        puck->getCharacteristicValue(PTRAIL_UUID),
+        puck->getCharacteristicValue(PREDATA_UUID),
+        puck->getCharacteristicValue(CODE_UUID));
+    LOG_INFO("Fire complete!\n");
+}
+{% endhighlight %}
 
 Here we define onIRCodeWrite, which will get called by when the ir code characteristic gets updated over bluetooth.
 It simply calls fireIRCode using the current values of the different characteristics.
 
+{% highlight cpp %}
     int main() {
+{% endhighlight %}
 
 The program entry point.
 
