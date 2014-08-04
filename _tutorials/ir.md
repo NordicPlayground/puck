@@ -4,6 +4,12 @@ title: IR Puck
 description: How to create your own IR Puck
 ---
 
+This tutorial is part of a tutorial series on the [Nordic Pucks].
+I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
+
+In this tutorial, we will be building an IR puck, which is a puck that can mimic arbitrary infrared remote controls.
+This is useful for controlling things like TVs, radios, airconditioners, window blinds, and just about anything and everything that can be otherwise be controlled by a regular remote control.
+
 #Requirements
 - 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 - 3x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
@@ -17,11 +23,7 @@ Something to solder on
 
 (TODO: replace all images)
 
-This tutorial is part of a tutorial series on the [Nordic Pucks].
-I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
 
-In this tutorial, we will be building an IR puck, which is a puck that can mimic arbitrary infrared remote controls.
-This is useful for controlling things like TVs, radios, airconditioners, window blinds, and just about anything and everything that can be otherwise be controlled by a regular remote control.
 
 This is what the puck looks like: [image].
 
