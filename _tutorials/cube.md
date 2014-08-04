@@ -21,10 +21,7 @@ It is completely customizable and therefore also quite versatile.
 - 5x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 
 
-# Creating the cube puck
-Finished program available at http://mbed.org/teams/Nordic-Pucks/code/cube-puck/.
-
-## Hardware
+# Hardware
 
 The cube puck consists of an MPU5060 Intertial Measurement Unit wired together to an nrf51822 mbed.
 We are going to use the IMU to determine on which side the cube is currently resting.
@@ -60,9 +57,8 @@ mbed with finished wiring:
 
 ![](../images/2014-07-30 16.53.24.jpg)
 
-## Software
 
-### Basic setup
+# Software
 
 Now that the hardware is all assembled, let's get on to writing some code.
 We assume you've already read the <LINK Location Puck> tutorial.
@@ -104,7 +100,7 @@ TODO is it enough to power cycle the mpu? or just call mpu.initialize() again?
 
 Now we can get readings from the MPU.
 
-### Gatt service and characteristic setup
+## Gatt service and characteristic setup
 To broadcast the current rotation of the cube, we will need to expose its current rotation as a bluetooth LE gatt characteristic within a service.
 Think of a gatt service as an object exposed over bluetooth LE, with gatt characteristics corresponding to fields on the object.
 
