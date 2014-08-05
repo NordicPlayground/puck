@@ -3,7 +3,7 @@ author: Nordic Semiconductor
 markdown: kramdown
 highlighter: pygments
 description: An mbed project
-baseurl: /pucks
+baseurl: /puck
 github: http://www.github.com/NordicSemiconductor
 twitter: http://www.twitter.com/
 email: rnpatel[at]me.com
