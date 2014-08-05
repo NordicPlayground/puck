@@ -59,15 +59,20 @@ The e-paper shield is an arduino shield, but since we're using a different form-
 > Pin mapping between the mbed and the e-paper shield.
 
 > ![](../images/IMG_2675.JPG)
-> Image of something. TODO: write a better text here.
+> Wires connected to the shield.
 
 In the future a pin adaptor might be available for the nrf51822 which will make it easier to connect arduino shields without using single wires.
 
 # Software
 
-Now that the hardware is all assembled, let's get on to writing some code. We assume you've already read the [Location Puck tutorial]. We're going to use the same Puck library for the display, so we create a new project and set it up just like the location puck.
+Now that the hardware is all assembled, let's get on to writing some code.
+We assume you've already read the [Location Puck tutorial](location.html).
+We're going to use the same Puck library for the display, so we create a new project and set it up just like the location puck.
 
-The e-paper display shield has an SPI interface, which is the interface we are going to use to flash it with images. Luckily, we have ported an already existing Arduino e-paper library over to mbed which takes care of the protocol details. This library should be included in your project. Grab it at [http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/](http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/). With it included, the EPD _(Electronic Paper Display)_ can be declared with the proper pin settings:
+The e-paper display shield has an SPI interface, which is the interface we are going to use to flash it with images.
+Luckily, we have ported an already existing Arduino e-paper library over to mbed which takes care of the protocol details.
+This library should be included in your project. Grab it at [our seeedstudio-epaper repo on mbed](http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/).
+With it included, the EPD _(Electronic Paper Display)_ can be declared with the proper pin settings:
 
 > {% highlight cpp %}
 EPD_Class EPD(p0, p2, p3, p8, p5, p6, p7);
@@ -76,11 +81,15 @@ EPD_Class EPD(p0, p2, p3, p8, p5, p6, p7);
 This gives us an `EPD_Class` upon which we can call convienient high-level methods such as `image` and `clear` to flash images, and clear the screen, respectively.
 
 Now that we have the possibility to write images to the screen, we need a way to transmit images over Bluetooth.
-For the display puck we have defined a custom GATT service ([read more about how GATT works in our BLE tutorial](ble.html)) with it's own UUID ("bftj display    "). A bluetooth UUID is 128 bits long, so we use a convention with 16 letters of 8 bit each. 'bftj' is a general prefix we've decided to use for all our pucks' UUIDs, to avoid collisions with other vendors.
+For the display puck we have defined a custom GATT service ([read more about how GATT works in our BLE tutorial](ble.html)) with it's own UUID `"bftj display    "`.
+A bluetooth UUID is 128 bits long, so we use a convention with 16 letters of 8 bit each. `'bftj'` is a general prefix we've decided to use for all our pucks' UUIDs, to avoid collisions with other vendors.
 
-The display service provides two characteristics: one for sending commands such as 'start image' and 'end image', and one for transmitting serialized compressed image data.
+The display service provides two characteristics: one for sending commands such as `start image` and `end image`, and one for transmitting serialized compressed image data.
 
-The nRF51822 doesn't have a lot of available memory (8kB of RAM is available to the programmer). As the display has 46464 pixels, we're not able to store entire images in memory at once. Because of this, our protocol revolves around sending and rendering images in chunks, so that only parts of the image ever needs to reside in memory at once. Specifically, the image transmission protocol   first transfers the LZ77-compressed upper half of the image, in-place-decompresses it, and then draws it to the e-paper display. The same is then done for the lower part of the image.
+The nRF51822 doesn't have a lot of available memory (8kB of RAM is available to the programmer). As the display has 46464 pixels, we're not able to store entire images in memory at once.
+Because of this, our protocol revolves around sending and rendering images in chunks, so that only parts of the image ever needs to reside in memory at once.
+Specifically, the image transmission protocol first transfers the LZ77-compressed upper half of the image, in-place-decompresses it, and then draws it to the e-paper display.
+The same is then done for the lower part of the image.
 
 To control this flow, we need to define some commands:
 
@@ -93,9 +102,14 @@ To control this flow, we need to define some commands:
 #define COMMAND_BEGIN_LOWER 5
 {% endhighlight %}
 
-Each pixel in the display can only be completely black or completely white (no greys, no colors), which means we only need one bit for each pixel. Using som bit-twiddling operations, we can pack 8 pixels in each byte of data. This means that a bit-packed image takes 5808 bytes of storage. Since we send only half an image at a time, we need to be able to hold 2904 bytes of image data in RAM at a time.
+Each pixel in the display can only be completely black or completely white (no greys, no colors), which means we only need one bit for each pixel.
+Using som bit-twiddling operations, we can pack 8 pixels in each byte of data.
+This means that a bit-packed image takes 5808 bytes of storage.
+Since we send only half an image at a time, we need to be able to hold 2904 bytes of image data in RAM at a time.
 
-To reduce the amount of data that needs to be sent over the bluetooth link, the bit-packed image is compressed before transmission. When researching data compression algorithms, the LZ77 algorithm was found to have very little memory overhead during decompression (a plus in our memory constrained system) as well as a decent compression rate. It has a worst-case compressed file size slightly larger than the decompressed file size, so to be safe the receive buffer is initialized with a little extra room.
+To reduce the amount of data that needs to be sent over the bluetooth link, the bit-packed image is compressed before transmission.
+When researching data compression algorithms, the LZ77 algorithm was found to have very little memory overhead during decompression (a plus in our memory constrained system) as well as a decent compression rate.
+It has a worst-case compressed file size slightly larger than the decompressed file size, so to be safe the receive buffer is initialized with a little extra room.
 
 > {% highlight cpp %}
 #define IMAGE_SIZE 2904
@@ -106,12 +120,15 @@ uint8_t buffer[BUFFER_SIZE];
 int currentCommand = COMMAND_NOOP;
 {% endhighlight %}
 
-Because of little available memory, we can't afford the luxury of having separate receive and image buffers. Therefore, received data is stored at the end of the image buffer, and will be decompressed to the same space. As we use the LZ77 compression algorithm, data will be decompressed incrementally. As data is decompressed, space will be freed up in the image buffer for storing the image.
+Because of little available memory, we can't afford the luxury of having separate receive and image buffers.
+Therefore, received data is stored at the end of the image buffer, and will be decompressed to the same space.
+As we use the LZ77 compression algorithm, data will be decompressed incrementally. As data is decompressed, space will be freed up in the image buffer for storing the image.
 
-Now, onto the code for receiving the command instructions. When we receive an `IMAGE_BEGIN` command, we set the `receiveIndex` (the index that we will write the received data to) to the end of the image buffer. It is then written backwards into the buffer as it is received. When we receive a command that tells us all the data has been transmitted, the received segment is flipped, decompressed, and finally written to the display.
+Now, onto the code for receiving the command instructions.
+When we receive an `IMAGE_BEGIN` command, we set the `receiveIndex` (the index that we will write the received data to) to the end of the image buffer.
+It is then written backwards into the buffer as it is received. When we receive a command that tells us all the data has been transmitted, the received segment is flipped, decompressed, and finally written to the display.
 
-![](../images/receive%20image%20data.png)
-
+> ![](../images/receive%20image%20data.png)
 << THIS IMAGE NEEDS A LEGEND TO EXPLAIN WTF RED AND ORANGEyellow is, also wut is green >>
 
 The code for this is as follows. Most of the magic here is happening inside the LZ-compression, which we will not be looking into. The decompressed image is then flashed to the display.
@@ -131,7 +148,8 @@ case COMMAND_IMAGE_UPPER:
 
 The code for flashing the lower half is more or less the same, with the exception of the coordinates we pass to the EPD.image method.
 
-Next, receiving the data itself. The data characteristic is 20 bytes long (the maximum size), so we need to send the data in chunks of 20 bytes. All we really need is a callback for the data characteristic write, which stores the received bytes in the receive buffer.
+Next, receiving the data itself. The data characteristic is 20 bytes long (the maximum size), so we need to send the data in chunks of 20 bytes.
+All we really need is a callback for the data characteristic write, which stores the received bytes in the receive buffer.
 
 Now that we've got the methods for handling data transfer ready, let's hook it all up in the main function.
 
@@ -145,9 +163,8 @@ int main() {
 {% endhighlight %}
 
 First, some additional setup for the display shield.
-The shield supports some additional peripheral functions such as using an SD card for storage, but we are not going to use these features. Therefore, we should bring their SPI Chip Select signals high to avoid any confusion on who is using the SPI bus.
-
-
+The shield supports some additional peripheral functions such as using an SD card for storage, but we are not going to use these features.
+Therefore, we should bring their SPI Chip Select signals high to avoid any confusion on who is using the SPI bus.
 
 
 > {% highlight cpp %}
@@ -159,7 +176,6 @@ Next, we need to let the puck library know which characteristics we want to use,
 
 
 
-
 > {% highlight cpp %}
 puck->onCharacteristicWrite(&COMMAND_UUID, onCommandWritten);
 puck->onCharacteristicWrite(&DATA_UUID, onDataWritten);
@@ -167,13 +183,12 @@ puck->onCharacteristicWrite(&DATA_UUID, onDataWritten);
 
 We also hook up some callbacks to react on characteristic writes.
 
-
-
 > {% highlight cpp %}
 puck->init(0x5EED);
 {% endhighlight %}
 
-After we are done configuring our puck object, we can init the puck with a 16 bit identifier. It is important that `init(..)` gets called after we are done doing confugiration such as `addCharacteristic(..)` etc., as `init(..)` initialized the puck based on the configuration it has received.  
+After we are done configuring our puck object, we can init the puck with a 16 bit identifier.
+It is important that `init(..)` gets called after we are done doing confugiration such as `addCharacteristic(..)` etc., as `init(..)` initialized the puck based on the configuration it has received.  
 
 
 > {% highlight cpp %}
