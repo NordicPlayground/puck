@@ -214,6 +214,7 @@ blockquote
   margin-left:-40px;
   margin-right:-40px;
   padding-left:40px;
+  padding-right:40px;
   background:#f3f3f7;
   text-align: center;
 }
@@ -422,6 +423,16 @@ img
   position: relative;
   max-width: 60%;
   margin: 10px auto;
+}
+
+.two-images {
+  overflow: hidden;
+}
+
+.two-images img {
+  max-width: 48%;
+  float: left;
+  margin: 0 1%;
 }
 
 .user-social
@@ -770,6 +781,10 @@ td, th
   }
 
 
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
 
 .showcase-wrapper {

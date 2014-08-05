@@ -33,6 +33,7 @@ When Evere notices that an event has triggered for a certain puck, the applicati
 
 > ![](/mbed-pucks/images/smartphone-apps/rules_overview_ios.PNG)
 > ![](/mbed-pucks/images/smartphone-apps/rules_overview_android.png)
+{: .two-images}
 
 ## Triggers
 
@@ -72,21 +73,25 @@ Creating a rule is pretty simple:
 
 > ![](/mbed-pucks/images/smartphone-apps/select_puck_ios.PNG)
 > ![](/mbed-pucks/images/smartphone-apps/select_puck_android.png)
+{: .two-images}
 
 - Select an event (trigger) to listen for
 
 > ![](/mbed-pucks/images/smartphone-apps/select_trigger_ios.PNG)
 > ![](/mbed-pucks/images/smartphone-apps/select_trigger_android.png)
+{: .two-images}
 
 - Select an actuator (action) to be triggered when the rule is fired.
 
 > ![](/mbed-pucks/images/smartphone-apps/select_actuator_ios.PNG)
 > ![](/mbed-pucks/images/smartphone-apps/select_actuator_android.png)
+{: .two-images}
 
 - Customise actuator settings (if any)
 
 > ![](/mbed-pucks/images/smartphone-apps/select_actuator_settings_ios.PNG)
 > ![](/mbed-pucks/images/smartphone-apps/select_actuator_settings_android.png)
+{: .two-images}
 
 - And you're done!
 
