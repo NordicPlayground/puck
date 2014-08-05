@@ -69,7 +69,7 @@ Now that the hardware is all assembled, let's get on to writing some code. We as
 
 The e-paper display shield has an SPI interface, which is the interface we are going to use to flash it with images. Luckily, we have ported an already existing Arduino e-paper library over to mbed which takes care of the protocol details. This library should be included in your project. Grab it at [http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/](http://mbed.org/teams/Nordic-Pucks/code/seeedstudio-epaper/). With it included, the EPD _(Electronic Paper Display)_ can be declared with the proper pin settings:
 
-{% highlight cpp %}
+> {% highlight cpp %}
 EPD_Class EPD(p0, p2, p3, p8, p5, p6, p7);
 {% endhighlight %}
 
@@ -84,7 +84,7 @@ The nRF51822 doesn't have a lot of available memory (8kB of RAM is available to 
 
 To control this flow, we need to define some commands:
 
-{% highlight cpp %}
+> {% highlight cpp %}
 #define COMMAND_NOOP 0
 #define COMMAND_CLEAR 1
 #define COMMAND_IMAGE_UPPER 2
@@ -97,7 +97,7 @@ Each pixel in the display can only be completely black or completely white (no g
 
 To reduce the amount of data that needs to be sent over the bluetooth link, the bit-packed image is compressed before transmission. When researching data compression algorithms, the LZ77 algorithm was found to have very little memory overhead during decompression (a plus in our memory constrained system) as well as a decent compression rate. It has a worst-case compressed file size slightly larger than the decompressed file size, so to be safe the receive buffer is initialized with a little extra room.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 #define IMAGE_SIZE 2904
 #define BUFFER_SIZE 2917
 #define Y_SIZE 88
@@ -136,7 +136,7 @@ Next, receiving the data itself. The data characteristic is 20 bytes long (the m
 Now that we've got the methods for handling data transfer ready, let's hook it all up in the main function.
 
 
-{% highlight cpp %}
+> {% highlight cpp %}
 int main() {
     DigitalOut SD_CS(p4);
     DigitalOut WORD_STOCK_CS(p26);
@@ -151,7 +151,7 @@ The shield supports some additional peripheral functions such as using an SD car
 
 
 
-{% highlight cpp %}
+> {% highlight cpp %}
 puck->addCharacteristic(DISPLAY_SERVICE_UUID, COMMAND_UUID, 1);
 puck->addCharacteristic(DISPLAY_SERVICE_UUID, DATA_UUID, 20);
 {% endhighlight %}
@@ -161,7 +161,7 @@ Next, we need to let the puck library know which characteristics we want to use,
 
 
 
-{% highlight cpp %}
+> {% highlight cpp %}
 puck->onCharacteristicWrite(&COMMAND_UUID, onCommandWritten);
 puck->onCharacteristicWrite(&DATA_UUID, onDataWritten);
 {% endhighlight %}
@@ -170,14 +170,14 @@ We also hook up some callbacks to react on characteristic writes.
 
 
 
-{% highlight cpp %}
+> {% highlight cpp %}
 puck->init(0x5EED);
 {% endhighlight %}
 
 After we are done configuring our puck object, we can init the puck with a 16 bit identifier. It is important that `init(..)` gets called after we are done doing confugiration such as `addCharacteristic(..)` etc., as `init(..)` initialized the puck based on the configuration it has received.  
 
 
-{% highlight cpp %}
+> {% highlight cpp %}
 while (puck->drive());
 {% endhighlight %}
 
