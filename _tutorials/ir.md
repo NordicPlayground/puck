@@ -139,6 +139,7 @@ const UUID CODE_UUID = stringToUUID("bftj ir code ");
 {% endhighlight %}
 
 Here we define the different UUIDs of the services and characteristics we intend to use.
+A bluetooth UUID is 128 bits long, so we use a convention with 16 letters of 8 bit each. `'bftj'` is a general prefix we've decided to use for all our pucks' UUIDs, to avoid collisions with other vendors.
 For more information about how services and characteristics work, check out our [BLE tutorial].
 
 We have a couple different characteristics that together make up the IR signal.
