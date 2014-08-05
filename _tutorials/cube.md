@@ -24,12 +24,13 @@ It is completely customizable and therefore also quite versatile.
 
 # Hardware
 
-The cube puck consists of an MPU5060 Intertial Measurement Unit wired together to an nrf51822 mbed.
+The cube puck consists of an MPU5060 Intertial Measurement Unit wired together to an nRF51822 mbed.
 We are going to use the IMU to determine on which side the cube is currently resting.
 The MPU5060 IMU comes pre-soldered onto a breakout board, so we will need to connect it to our mbed using wires.
 We soldered some header pins to our IMU breakout board to allow easy wire connection, but you can also solder your wires directly onto the through-holes.
 
 > ![](../images/2014-07-30 16.52.09.jpg)
+> Some header pins soldered onto the MP5060 breakout board through-holes.
 
 In order to communicate with the MPU5060, will need to set up an [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) connection between the mbed board and the MPU5060, as well as connect power and ground.
 The following table shows the wire mappings used in this project.
@@ -62,30 +63,26 @@ The MPU5060 also supports interrupts using the INT pin, but we will not be using
 
 Now that the hardware is all assembled, let's get on to writing some code.
 We assume you've already read the [location tutorial](location.html).
-We're going to use the same Puck library for the display, so we create a new project and set it up just like the location puck.
+We're going to use the same Puck library for the cube, so we create a new project and set it up just like the location puck.
 
-In addition we will be using one of many MPU6050 libraries for mbed, more specifically our [fork of Simon Garfieldsg library](http://mbed.org/teams/Nordic-Pucks/code/MPU6050/).
-The only difference from the original is that this library has changed the I2C pins to use pin 13 and 15 (available as defines in MPU6050/I2Cdev.cpp) which are the standard I2C pins for the nRF51822.
+In addition we will be using one of many MPU6050 libraries for mbed, specifically [our fork of Simon Garfieldsg's library](http://mbed.org/teams/Nordic-Pucks/code/MPU6050/).
+The only difference from the original is that this library has changed the I2C pins to use pin p13 and p15 (available as defines in MPU6050/I2Cdev.cpp) which are the standard I2C pins for the nRF51822.
 
 Import the library and include it in your main.cpp file.
 
 > ![](../images/MPU library.PNG)
 > The library to import.
 
-IMU setup and initialization
-Include the MPU5060 header and create an MPU5060 object.
+Now we are going to go through the cube puck source code line-by-line, explaining as we go.
 
 > {% highlight cpp %}
 #include "MPU6050.h"
 MPU6050 mpu;
 {% endhighlight %}
 
-Now initialize the MPU in the main function main.cpp.
-After the call to `initialize()` we test the MPU connection by calling `testConnection()`.
-If this returns `true`, we're good to go.
-Sometimes false is returned, to fix this you should power cycle the mbed, leaving it turned off for 3-4 seconds before turning on again.
+In order to use the MPI5060 library, we need to include the MPU5060 header and create an MPU5060 object.
 
-> //TODO: is it enough to power cycle the mpu? or just call mpu.initialize() again?
+
 
 > {% highlight cpp %}
 int main() {
@@ -100,6 +97,13 @@ int main() {
     ....
 }
 {% endhighlight %}
+
+Here we initialize the MPU in the main function main.cpp.
+After the call to `initialize()` we test the MPU connection by calling `testConnection()`.
+If this returns `true`, we're good to go.
+Sometimes false is returned, to fix this you should power cycle the mbed, leaving it turned off for 3-4 seconds before turning on again.
+
+//TODO: is it enough to power cycle the mpu? or just call mpu.initialize() again?
 
 Now we can get readings from the MPU.
 
