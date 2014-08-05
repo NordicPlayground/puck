@@ -140,7 +140,6 @@ Now that we've got the methods for handling data transfer ready, let's hook it a
 int main() {
     DigitalOut SD_CS(p4);
     DigitalOut WORD_STOCK_CS(p26);
-    
     SD_CS = 1;
     WORD_STOCK_CS = 1;
 {% endhighlight %}
