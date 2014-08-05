@@ -143,8 +143,7 @@ Harvest data from IMU and update gatt attribute
 This section will walk through how we can use the MPU library to determine our cube's rotation.
 
 > {% highlight cpp %}
-void updateCubeDirection(void) {
-
+void updateCubeDirection(void) 
     int16_t ax, ay, az;
     int16_t gx, gy, gz;
 ...
