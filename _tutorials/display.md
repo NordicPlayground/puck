@@ -117,17 +117,17 @@ Now, onto the code for receiving the command instructions. When we receive an `I
 The code for this is as follows. Most of the magic here is happening inside the LZ-compression, which we will not be looking into. The decompressed image is then flashed to the display.
 
 > {% highlight cpp %}
-> case COMMAND_IMAGE_UPPER:
->     LOG_INFO("Writing image to top half of display.\n");
->     reverseBufferSegment(receiveIndex, BUFFER_SIZE);
->     LZ_Uncompress(buffer + receiveIndex, buffer, BUFFER_SIZE - receiveIndex);
->     LOG_INFO("Uncompressed %i bytes of data.\n", BUFFER_SIZE - receiveIndex);
->     EPD.begin(EPD_2_7);
->     EPD.start();
->     EPD.image(buffer, 0, EPD.lines_per_display / 2);
->     EPD.end();
->     break;
-> {% endhighlight %}
+case COMMAND_IMAGE_UPPER:
+    LOG_INFO("Writing image to top half of display.\n");
+    reverseBufferSegment(receiveIndex, BUFFER_SIZE);
+    LZ_Uncompress(buffer + receiveIndex, buffer, BUFFER_SIZE - receiveIndex);
+    LOG_INFO("Uncompressed %i bytes of data.\n", BUFFER_SIZE - receiveIndex);
+    EPD.begin(EPD_2_7);
+    EPD.start();
+    EPD.image(buffer, 0, EPD.lines_per_display / 2);
+    EPD.end();
+    break;
+{% endhighlight %}
 
 The code for flashing the lower half is more or less the same, with the exception of the coordinates we pass to the EPD.image method.
 
