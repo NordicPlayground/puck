@@ -6,14 +6,11 @@ image: http://lorempixel.com/g/400/400/
 ---
 
 This tutorial will teach you how to set up a location puck - the basic puck that all of our other pucks are based upon.
-If you are not familiar with pucks or our project, please read our introductory post here: <#link to post#>.
+If you are not familiar with pucks or our project, please read our [introductory post here](/).
 In short, a puck is a Bluetooth Low Energy-powered device that will, using your smartphone as a central hub, work as a building block for your Internet-of-Things-related needs. 
 
 # Requirements
 - 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
-
-
-_TODO: shopping list of things you need_
 
 # Location Puck
 The location puck will give your smartphone context about the phone's location.
@@ -22,7 +19,7 @@ You can later set up rules for what should happen at different locations. More o
 ## 1. Register on mbed.org and add Nordic nRF51822 to your online IDE
 First thing's first - set up your IDE. We will use the official mbed IDE in the browser.
 This allows for extremely mobile development as you are not bound by your own computer to do development.
-Another huge benefit is that you do not need to set up any development stack locally ( ! ).
+Another huge benefit is that you do not need to set up any development stack locally (!).
 
 When an mbed is connected to your computer it will show up as a USB drive, in the same way a memory stick does.
 Compiling your code at mbed.org will download a .hex file to your computer, which when copied over to your mbed will update it with your program.
