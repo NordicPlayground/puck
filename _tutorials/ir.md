@@ -24,7 +24,7 @@ I am assuming that you have already read the [introduction tutorial] and the [lo
 
 This is what the puck looks like: [image].
 
-## Nitty Gritty IR details
+## Infrared Remote Controls
 
 > ![](http://images.harmonyremote.com/EasyZapper/Support/FAQ/12467_IR_test.gif)
 
