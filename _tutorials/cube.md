@@ -61,10 +61,10 @@ The MPU5060 also supports interrupts using the INT pin, but we will not be using
 # Software
 
 Now that the hardware is all assembled, let's get on to writing some code.
-We assume you've already read the <LINK Location Puck> tutorial.
+We assume you've already read the [location tutorial](location.html).
 We're going to use the same Puck library for the display, so we create a new project and set it up just like the location puck.
 
-In addition we will be using one of many MPU6050 libraries for mbed, more specifically our fork of Simon Garfieldsg library, http://mbed.org/teams/Nordic-Pucks/code/MPU6050/.
+In addition we will be using one of many MPU6050 libraries for mbed, more specifically our [fork of Simon Garfieldsg library](http://mbed.org/teams/Nordic-Pucks/code/MPU6050/).
 The only difference from the original is that this library has changed the I2C pins to use pin 13 and 15 (available as defines in MPU6050/I2Cdev.cpp) which are the standard I2C pins for the nRF51822.
 
 Import the library and include it in your main.cpp file.
@@ -81,11 +81,11 @@ MPU6050 mpu;
 {% endhighlight %}
 
 Now initialize the MPU in the main function main.cpp.
-After the call to initialize() we test the MPU connection by calling testConnection().
-If this returns true, we're good to go.
+After the call to `initialize()` we test the MPU connection by calling `testConnection()`.
+If this returns `true`, we're good to go.
 Sometimes false is returned, to fix this you should power cycle the mbed, leaving it turned off for 3-4 seconds before turning on again.
 
-TODO is it enough to power cycle the mpu? or just call mpu.initialize() again?
+> //TODO: is it enough to power cycle the mpu? or just call mpu.initialize() again?
 
 > {% highlight cpp %}
 int main() {
@@ -103,9 +103,9 @@ int main() {
 
 Now we can get readings from the MPU.
 
-## Gatt service and characteristic setup
-To broadcast the current rotation of the cube, we will need to expose its current rotation as a bluetooth LE gatt characteristic within a service.
-Think of a gatt service as an object exposed over bluetooth LE, with gatt characteristics corresponding to fields on the object.
+### Gatt service and characteristic setup
+To broadcast the current rotation of the cube, we will need to expose its current rotation as a BLE gatt characteristic within a service.
+Think of a gatt service as an object, with gatt characteristics corresponding to fields on the object.
 
 Set up the following UUIDs for our service.
 
@@ -115,7 +115,7 @@ const UUID DIRECTION_UUID = stringToUUID("bftj cube dirctn");
 {% endhighlight %}
 
 Now add the characteristic to the puck via the following.
-This will create the gatt service "bftj cube       " if it doesn't exist, and add the direction characteristic "bftj cube dirctn" to it. The DIRECTION_UUID is a 1 byte value.
+This will create the gatt service `"bftj cube       "` if it doesn't exist, and add the direction characteristic `"bftj cube dirctn"` to it. The DIRECTION_UUID is a 1 byte value.
 
 > {% highlight cpp %}
 int characteristicValueLength = 1;
@@ -152,8 +152,9 @@ void updateCubeDirection(void) {
 }
 {% endhighlight %}
 
-Using the MPU library, all we need to do is call mpu.getMotion6 to read the current 6-axis motion data from the IMU.
-The six variables ax, ay, az, gx, gy and gz, which hold the accelerometer x, y, and z directions, and the gyroscope x, y, and z directions, respectively, are passed by reference to the library function so they can be populated with the correct data.
+Using the MPU library, all we need to do is call `mpu.getMotion6()` to read the current 6-axis motion data from the IMU.
+We have six variables: ax, ay, az, gx, gy and gz which hold the accelerometer directions and the gyroscope directions.
+These are passed by reference to get the correct data.
 Of the acquired data, we're only actually going to use the accelerometer data, as it is sufficient for obtaining the cube direction.
 
 > {% highlight cpp %}
