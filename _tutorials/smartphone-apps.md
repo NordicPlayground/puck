@@ -63,9 +63,9 @@ If a Display Puck or IR Puck is present, two additional actuators will appear:
 
 You can also create your own actuators. Read more about this in the [ Application Architecture ] tutorial.
 
-## Adding rules
+## Creating and deleting rules
 
-Adding a rule is pretty simple:
+Creating a rule is pretty simple:
 
 - Click the 'add' icon in the action bar
 - Select which Puck to add a rule for
@@ -90,4 +90,14 @@ Adding a rule is pretty simple:
 
 - And you're done!
 
+
 To delete a rule, click 'Remove Puck' on iOS, and the garbage bin icon on Android.
+
+
+## Extending Evere with custom actions and actuators
+
+If you wish to extend the client application with your own actuators, you can read how to do so at the github pages of the respective applications.
+
+- Puck Central android link
+- Puck Central iOS link
+
