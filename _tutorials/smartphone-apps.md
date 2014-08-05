@@ -9,7 +9,7 @@ image: http://lorempixel.com/g/400/400/
 
 At the core of all the pucks, and acting as the central, giving the pucks access to the outside world (the internet), is your smart phone.
 
-> ![](/mbed-pucks/images/whiteboard_2.jpg)
+> ![](/mbed-pucks/images/smartphone-apps/whiteboard_2.jpg)
 
 Your (Bluetooth LE compliant) smart phone can connect to all of these devices by running either the Android or iOS app that we've developed (known as Evere), or your own client-side application.
 From Evere you can subscribe to Puck events such as entering or leaving a zone, and triggering reactions thereupon. For example, entering your home library might set your phone to silent mode.
@@ -21,8 +21,8 @@ This tutorial will show you how to use Evere to set up your own rules and trigge
 For the application to be able to listen in for events on pucks, and to avoid spam from unknown pucks, each puck has to be paired with the application before further usage.
 Pairing is achieved by holding your smartphone close to a puck, and filling in the pair-puck popup that will appear.
 
-> ![](/mbed-pucks/images/app_2.PNG)
-> ![](/mbed-pucks/images/app_2.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/pair_puck_ios.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/pair_puck_android.PNG)
 
 We're now ready to create our own rules.
 
@@ -31,8 +31,8 @@ We're now ready to create our own rules.
 A rule is composed of three parts: A puck identifier, an event to listen for (trigger), and a set of actions to execute.
 When Evere notices that an event has triggered for a certain puck, the application looks in its database for a rule matching the puck and event triggered. If a matching rule is found, the actions of the rule are triggered.
 
-> ![](/mbed-pucks/images/app_11.PNG)
-> ![](/mbed-pucks/images/app_11.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/rules_overview_ios.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/rules_overview_ios.PNG)
 
 ## Triggers
 
@@ -70,23 +70,23 @@ Adding a rule is pretty simple:
 - Click the 'add' icon in the action bar
 - Select which Puck to add a rule for
 
-> ![](/mbed-pucks/images/app_3.PNG)
-> ![](/mbed-pucks/images/app_3.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_puck_ios.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_puck_android.PNG)
 
 - Select an event (trigger) to listen for
 
-> ![](/mbed-pucks/images/app_4.PNG)
-> ![](/mbed-pucks/images/app_4.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_trigger_ios.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_trigger_android.PNG)
 
 - Select an actuator (action) to be triggered when the rule is fired.
 
-> ![](/mbed-pucks/images/app_5.PNG)
-> ![](/mbed-pucks/images/app_5.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_actuator_ios.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_actuator_android.PNG)
 
 - Customise actuator settings (if any)
 
-> ![](/mbed-pucks/images/app_8.PNG)
-> ![](/mbed-pucks/images/app_8.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_actuator_settings_ios.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_actuator_settings_android.PNG)
 
 - And you're done!
 
