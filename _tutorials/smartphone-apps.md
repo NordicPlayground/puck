@@ -22,7 +22,7 @@ For the application to be able to listen in for events on pucks, and to avoid sp
 Pairing is achieved by holding your smartphone close to a puck, and filling in the pair-puck popup that will appear.
 
 > ![](/mbed-pucks/images/smartphone-apps/pair_puck_ios.PNG)
-> ![](/mbed-pucks/images/smartphone-apps/pair_puck_android.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/pair_puck_android.png)
 
 We're now ready to create our own rules.
 
@@ -32,7 +32,7 @@ A rule is composed of three parts: A puck identifier, an event to listen for (tr
 When Evere notices that an event has triggered for a certain puck, the application looks in its database for a rule matching the puck and event triggered. If a matching rule is found, the actions of the rule are triggered.
 
 > ![](/mbed-pucks/images/smartphone-apps/rules_overview_ios.PNG)
-> ![](/mbed-pucks/images/smartphone-apps/rules_overview_ios.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/rules_overview_android.png)
 
 ## Triggers
 
@@ -71,22 +71,22 @@ Adding a rule is pretty simple:
 - Select which Puck to add a rule for
 
 > ![](/mbed-pucks/images/smartphone-apps/select_puck_ios.PNG)
-> ![](/mbed-pucks/images/smartphone-apps/select_puck_android.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_puck_android.png)
 
 - Select an event (trigger) to listen for
 
 > ![](/mbed-pucks/images/smartphone-apps/select_trigger_ios.PNG)
-> ![](/mbed-pucks/images/smartphone-apps/select_trigger_android.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_trigger_android.png)
 
 - Select an actuator (action) to be triggered when the rule is fired.
 
 > ![](/mbed-pucks/images/smartphone-apps/select_actuator_ios.PNG)
-> ![](/mbed-pucks/images/smartphone-apps/select_actuator_android.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_actuator_android.png)
 
 - Customise actuator settings (if any)
 
 > ![](/mbed-pucks/images/smartphone-apps/select_actuator_settings_ios.PNG)
-> ![](/mbed-pucks/images/smartphone-apps/select_actuator_settings_android.PNG)
+> ![](/mbed-pucks/images/smartphone-apps/select_actuator_settings_android.png)
 
 - And you're done!
 
