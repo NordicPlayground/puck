@@ -108,6 +108,7 @@ To broadcast the current rotation of the cube, we will need to expose its curren
 Think of a gatt service as an object, with gatt characteristics corresponding to fields on the object.
 
 Set up the following UUIDs for our service.
+A bluetooth UUID is 128 bits long, so we use a convention with 16 letters of 8 bit each. `'bftj'` is a general prefix we've decided to use for all our pucks' UUIDs, to avoid collisions with other vendors.
 
 > {% highlight cpp %}
 const UUID CUBE_SERVICE_UUID = stringToUUID("bftj cube       ");
