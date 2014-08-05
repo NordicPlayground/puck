@@ -114,14 +114,16 @@ Most of the files are not important right now, but note the file named Puck.h.
 This file contains all of the bootstrapping code necessary for making a Puck.
 Go back to main.cpp and write the following code to make a location puck.
 
-    #include "Puck.h"
+{% highlight cpp %}
+#include "Puck.h"
 
-    Puck *puck = &Puck::getPuck();
+Puck *puck = &Puck::getPuck();
 
-    int main(void) {
-        puck->init(0xBEEF);
-        while(puck->drive());
-    }
+int main(void) {
+    puck->init(0xBEEF);
+    while(puck->drive());
+}
+{% endhighlight %}
 
 The first line of code after the include is where we get a reference to the global Puck object.
 This object takes care of setting up Bluetooth. In the main function we initialize our puck and pass in an identifying number.
