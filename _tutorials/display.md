@@ -6,7 +6,7 @@ image: http://lorempixel.com/g/400/400/
 ---
 
 
-This tutorial is part of a tutorial series on the [Nordic Pucks](.).
+This tutorial is part of a tutorial series on the [Nordic Pucks](../tutorials.html).
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
 This tutorial will describe how to create a Bluetooth-enabled puck with an e-paper display. The display we have used is 264 x 176 pixels, and we're going to design a protocol which lets a connected device transmit an arbitrary black/white image to it via BLE. We will go through the necessary hardware setup, as well as the code needed to support it.
