@@ -31,7 +31,7 @@ We soldered some header pins to our IMU breakout board to allow easy wire connec
 
 > ![](../images/2014-07-30 16.52.09.jpg)
 
-In order to communicate with the MPU5060, will need to set up a TWI (I2C) connection (a simple two-wire bus interface) between the mbed board and the MPU5060, as well as connect power and ground.
+In order to communicate with the MPU5060, will need to set up an [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) connection between the mbed board and the MPU5060, as well as connect power and ground.
 The following table shows the wire mappings used in this project.
 The MPU5060 also supports interrupts using the INT pin, but we will not be using it in this tutorial.
 
