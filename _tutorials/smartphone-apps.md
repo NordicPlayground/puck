@@ -23,6 +23,7 @@ Pairing is achieved by holding your smartphone close to a puck, and filling in t
 
 > ![](/mbed-pucks/images/smartphone-apps/pair_puck_ios.PNG)
 > ![](/mbed-pucks/images/smartphone-apps/pair_puck_android.png)
+{: .two-images}
 
 We're now ready to create our own rules.
 
