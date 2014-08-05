@@ -40,45 +40,49 @@ In order make the patterns stand out against other sources of infrared backgroun
 Binary bits are typically coded by differing how much time passes between each burst of 38kHz flashing.
 For instance, many Samsung TVs will flash for 560 ms and stay silent for 560 ms to indicate a binary '0', and flash for 560 ms and stay silent for 1680 ms to indicate a binary '1'.
 
-### NEC Modulation
+### LIRC
 
 Since there are so many different remote control signal coding standards used, making a universal remote can be quite a challenge.
-Luckily, there is a [large database on the internet called LIRC] that has collected most of the different codes and standards used for popular home appliances.
+Luckily, there is a [large database on the internet called LIRC](http://www.lirc.org/) that has collected most of the different codes and standards used for popular home appliances.
 Therefore, if you can find your remote control on LIRC, you can easily replace it with an IR puck!
 If you can't find your particular remote control there, you can still pull out an oscilloscope or an IR receiver or similar, and simply measure the codes that the remote control uses, and replicate those in your puck.
 If you're feeling particularly helpful, you can even contribute those codes to LIRC to help other hackers!
 
-## Making your own IR sender
+## Hardware
 
-We made our own IR sender, if you too want to do that, here's our guide.
-We assume you have basic soldering skills.
+The hardware used for the IR Puck consists of an nRF51822 and a simple IR emitter circuit. This section explains how to build the latter from simple household parts*.
+
+(*: if you live in a RadioShack).
 
 ### Requirements:
 - IR led
 - Resistors (1k and one for your IR led)
 - NPN transistor
 - Soldering iron / solder
-- Something to solder on
 
-When dealing with IR on the mbed we found that the power from the GPIO pins were not sufficient to light our IR led.
-Because of this we needed a bigger power source. We wired the LED directly to VCC on the board and used a NPN transistor to control if the led should light or not.
+When dealing with IR on the mbed we found that the power from the GPIO pins were not sufficient to drive the IR led.
+Instead, we wired the LED directly to VCC on the board and used an NPN transistor to control if the led should light or not.
 A NPN transistor has three legs, a collector, and emitter and a base.
-When the base is driven high the collector and emitter circuit is connected and the current flows through.
+When the base is driven high, the collector and emitter circuit is connected and the current flows through.
 In our case this means that the LED will start lighting.
-Our IR puck uses PIN14 to drive the LED signal. You can see our circuit drawing below.
+Our IR puck uses PIN14 to drive the LED signal. You can see our circuit diagram below.
 
 > ![](../images/ir_module.PNG)
+> Diagram of our simple IR emitter circuit.
 
-Our LED needed a 5 ohm resistor so we used two 10 ohm resistors in parallel.
+Our LED needed a 5 ohm resistor, but we used an equvalent two 10 ohm resistors in parallel instead, as that was what we had in stock.
+Your LED probably needs a different amount of resistance - this varies depending on which LED you have.
+The LED Center provides [an excellent LED resistance calculator](http://led.linear1.org/led.wiz) online, which is useful for calculating resistor needs.
 Be sure to check your own LED to make sure it doesn't break.
 Another noteworthy thing is that you should use thru-hole resistors for the LED as most on-board resistors will not handle the high temperature from the voltage over time very well.
 
-Here you can see our implementation of this circuit board we used for our IR puck.
+Here you can see our implementation of this circuit board we used for our IR puck:
 
 > ![](../images/Slack for iOS Upload.jpg)
+> A simple IR emitter circuit. Can you tell that we don't solder things very often?
 
-The green wire in connected to PIN14, the black to VCC and the red to GND.
-Here you can see our drawing for this specific implementation.
+The green wire is connected to PIN14, the black to VCC and the red to GND.
+Here you can see our drawing for this specific implementation:
 
 > ![](../images/Slack for iOS Upload (1).jpg)
 
