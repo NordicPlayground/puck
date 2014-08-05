@@ -72,7 +72,8 @@ Our IR LED needed a 5 ohm resistor, but we used an equvalent two 10 ohm resistor
 Your LED probably needs a different amount of resistance - this varies depending on which LED you have.
 The LED Center provides [an excellent LED resistance calculator](http://led.linear1.org/led.wiz) online, which is useful for calculating resistor needs.
 Be sure to check your own LED to make sure it doesn't break.
-Another noteworthy thing is that you should use thru-hole resistors for the LED as most on-board resistors will not handle the high temperature from the voltage over time very well.
+Another noteworthy thing is that you should use thru-hole resistors for the LED.
+Most on-board resistors will not handle the high current bursts you will send to the LED and will, over time, be destroyed.
 
 Here you can see our implementation of this circuit board we used for our IR puck:
 
