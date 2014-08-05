@@ -75,7 +75,7 @@ Import the library and include it in your main.cpp file.
 IMU setup and initialization
 Include the MPU5060 header and create an MPU5060 object.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 #include "MPU6050.h"
 MPU6050 mpu;
 {% endhighlight %}
@@ -87,7 +87,7 @@ Sometimes false is returned, to fix this you should power cycle the mbed, leavin
 
 TODO is it enough to power cycle the mpu? or just call mpu.initialize() again?
 
-{% highlight cpp %}
+> {% highlight cpp %}
 int main() {
     LOG_VERBOSE("MPU6050 test startup:\n");
     mpu.initialize();
@@ -109,7 +109,7 @@ Think of a gatt service as an object exposed over bluetooth LE, with gatt charac
 
 Set up the following UUIDs for our service.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 const UUID CUBE_SERVICE_UUID = stringToUUID("bftj cube       ");
 const UUID DIRECTION_UUID = stringToUUID("bftj cube dirctn");
 {% endhighlight %}
@@ -117,7 +117,7 @@ const UUID DIRECTION_UUID = stringToUUID("bftj cube dirctn");
 Now add the characteristic to the puck via the following.
 This will create the gatt service "bftj cube       " if it doesn't exist, and add the direction characteristic "bftj cube dirctn" to it. The DIRECTION_UUID is a 1 byte value.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 int characteristicValueLength = 1;
 puck->addCharacteristic(
         CUBE_SERVICE_UUID,
@@ -133,7 +133,7 @@ We have given the characteristic the following properties:
 
 Now we can initialize the puck.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 puck->init(0xC0BE);
 {% endhighlight %}
 
@@ -142,14 +142,12 @@ Congratulations. You now have an mbed providing the cube service. Next up, getti
 Harvest data from IMU and update gatt attribute
 This section will walk through how we can use the MPU library to determine our cube's rotation.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 void updateCubeDirection(void) {
 
     int16_t ax, ay, az;
     int16_t gx, gy, gz;
-
 ...
-
     mpu.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 }
 {% endhighlight %}
@@ -158,7 +156,7 @@ Using the MPU library, all we need to do is call mpu.getMotion6 to read the curr
 The six variables ax, ay, az, gx, gy and gz, which hold the accelerometer x, y, and z directions, and the gyroscope x, y, and z directions, respectively, are passed by reference to the library function so they can be populated with the correct data.
 Of the acquired data, we're only actually going to use the accelerometer data, as it is sufficient for obtaining the cube direction.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 int16_t x = direction_if_exited(ax);
 int16_t y = direction_if_exited(ay);
 int16_t z = direction_if_exited(az);
@@ -167,7 +165,7 @@ int16_t z = direction_if_exited(az);
 Next, we normalize the acceleration data to a more discretized set of values (-1, 0, 1) based on the thresholding function direction_if_exited.
 This helps us filter out some the noise from the IMU sensors.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 int16_t sum = abs(x) + abs(y) + abs(z);
 if (sum != 1) {
     return;
@@ -176,7 +174,7 @@ if (sum != 1) {
 
 Based on the normalized data, we can make a qualified assumption as to whether or not there is enough data to determine a direction.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 Direction new_direction = UNDEFINED;
 if (z == 1) {
     new_direction = UP;
@@ -195,13 +193,11 @@ if (z == 1) {
 
 Based on the values read, we can assign a direction.
 
-{% highlight cpp %}
+> {% highlight cpp %}
 if (direction == new_direction) {
     return;
 }
-
 direction = new_direction;
-
 log_direction(direction);
 uint8_t directionAsInteger = direction;
 int length = 1;
