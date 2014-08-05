@@ -5,8 +5,8 @@ description: How to create your own IR Puck
 image: http://lorempixel.com/g/400/400/
 ---
 
-This tutorial is part of a tutorial series on the [Nordic Pucks].
-I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial].
+This tutorial is part of a tutorial series on the [Nordic Pucks](../tutorials.html).
+I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
 In this tutorial, we will be building an IR puck, which is a puck that can mimic arbitrary infrared remote controls.
 This is useful for controlling things like TVs, radios, airconditioners, window blinds, and just about anything and everything that can be otherwise be controlled by a regular remote control.
@@ -14,20 +14,19 @@ This is useful for controlling things like TVs, radios, airconditioners, window 
 # Requirements
 - 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 - 3x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
-
-### For custom IR sender
 - IR led
 - Resistors (1k and one for your IR led)
 - NPN transistor
 -  Soldering iron / solder
-Something to solder on
 
-This tutorial is part of a tutorial series on the [Nordic Pucks].
+This tutorial is part of a [tutorial series on the Nordic Pucks](../tutorials.html).
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
 This is what the puck looks like: [image].
 
 ## Nitty Gritty IR details
+
+> ![](http://images.harmonyremote.com/EasyZapper/Support/FAQ/12467_IR_test.gif)
 
 A large majority of remote controls for common day-to-day appliances are based on sending commands wirelessly using infrared light.
 Infrared light is simply light that is "too red" (i.e., the wavelength of the light is too long) to be seen by the human eye.
