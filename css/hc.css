@@ -304,7 +304,8 @@ pre
 #welcome-greeting
 {
   width:100%;
-  padding-top:5px
+  padding-top:5px;
+  text-align: center;
 }
 
 #welcome-greeting > h1
@@ -417,6 +418,7 @@ img
 {
   background: white;
   padding: 40px;
+  max-width: 700px;
 }
 
 .post
@@ -773,7 +775,6 @@ td, th
    transition: all 0.2s ease 0s;
    font-weight: 200;
    line-height: 30px;
-
   }
   .container {
     width: 100%;
