@@ -6,7 +6,7 @@ image: http://www.finefurniture.co/images/V184B.JPG
 order: 3
 ---
 
-This tutorial is part of a tutorial series on the [Nordic Pucks].
+This tutorial is part of a [tutorial series on the Nordic Pucks](../tutorials.html).
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
 In this tutorial, we will be building a cube puck, which is an innovative, new, bluetooth-enabled, situated and immersed remote control device.
@@ -104,7 +104,9 @@ After the call to `initialize()` we test the MPU connection by calling `testConn
 If this returns `true`, we're good to go.
 Sometimes false is returned, to fix this you should power cycle the mbed, leaving it turned off for 3-4 seconds before turning on again.
 
+{::comment}
 //TODO: is it enough to power cycle the mpu? or just call mpu.initialize() again?
+{:/comment}
 
 Now we can get readings from the MPU.
 
