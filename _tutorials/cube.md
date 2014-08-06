@@ -10,8 +10,8 @@ This tutorial is part of a [tutorial series on the Nordic Pucks](../tutorials.ht
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
 In this tutorial, we will be building a cube puck, which is an innovative, new, bluetooth-enabled, situated and immersed remote control device.
-The cube puck is a six-sided cube that can be rotated to any of its six sides to invoke the semantics linked to that side.
-It is completely customizable and therefore also quite versatile.
+It is a six-sided cube that can be rotated to any of its sides to invoke the semantics linked to that side.
+The cube puck is completely customizable and therefore also quite versatile.
 
 > ![](http://www.finefurniture.co/images/V184B.JPG)
 > Artist's rendition of what a cube might look like.
@@ -214,3 +214,8 @@ puck->updateCharacteristicValue(DIRECTION_UUID, &directionAsInteger, length);
 
 If the direction was different than the previous direction, we update the program state, and change the value of the direction characteristic.
 This will cause any Bluetooth devices listening for changes to get a notification.
+
+Now, the smart phone app should be able to pair with the cube puck.
+You can then set up triggers for different cube rotation, and define what should happen when the cube is rotated in different directions.
+
+[Read more about using the smart phone app!](smartphone-apps.html)
