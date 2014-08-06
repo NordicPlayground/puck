@@ -2,7 +2,7 @@
 layout: tutorial
 title: Display Puck
 description: How to create your own Display Puck
-image: http://lorempixel.com/g/400/400/
+image: ../images/displaypuck.png
 order: 4
 ---
 
