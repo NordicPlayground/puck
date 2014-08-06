@@ -196,4 +196,4 @@ It is important that `init(..)` gets called after we are done doing confugiratio
 while (puck->drive());
 {% endhighlight %}
 
-Finally, we keep the puck alive in a simple while loop. This will concede control the the Bluetooth Soft Device, letting it do its magic.
+Finally, we keep the puck alive in a simple while loop. This will concede control to the Bluetooth Soft Device, letting it do its magic.
