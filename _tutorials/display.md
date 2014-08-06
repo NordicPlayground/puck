@@ -189,7 +189,7 @@ puck->init(0x5EED);
 {% endhighlight %}
 
 After we are done configuring our puck object, we can init the puck with a 16 bit identifier.
-It is important that `init(..)` gets called after we are done doing confugiration such as `addCharacteristic(..)` etc., as `init(..)` initialized the puck based on the configuration it has received.  
+It is important that `init(..)` gets called after we are done doing configuration such as `addCharacteristic(..)` etc., as `init(..)` initializes the puck based on the configuration it has received.
 
 
 > {% highlight cpp %}
