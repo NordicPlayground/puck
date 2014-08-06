@@ -3,23 +3,23 @@ layout: post
 title: This is a puck
 ---
 
-Raspberry Pi took the maker community with storm when it launched in 2012.
+Raspberry Pi took the maker community by storm when it launched in 2012.
 With its internet access it allowed for small projects be internet-of-things enabled.
 We have created a platform to take this one step further.
 
 Our platform, called the Puck platform, is an internet of things platform for mbed.
 mbed makes it easy to program embedded chips for people who have not been working with embedded systems before.
-Our platform is built upon the first mbed chip with bluetooth, created by Nordic Semiconductor.
-This is a bluetooth mbed chip and with our platform it will be the Raspberry Pi of bluetooth.
+Our platform is built upon the first mbed chip with Bluetooth, created by Nordic Semiconductor.
+With our platform, we hope to make it the Raspberry Pi of Bluetooth.
 
 > mbed picture 1.png
 
 With our system it is easier than ever before to make your project dreams come true.
-Wheather you want to monitor your door to tell if it's open or closed, or maybe your want to text your wife when you leave work.
+Whether you want to monitor your door to tell if it's open or closed, or maybe your want to text your wife when you leave work.
 We will help you make an entity that we call a Puck.
 A puck is the physical object you create.
-The basis for this is the mbed chip, but you can add any chasis or hardware you want.
-This puck will be able to talk to the internet through your smart device.
+The basis for this is the mbed chip, but you can add any chassis or hardware you want.
+This puck will be able to talk to the internet through your smart phone.
 Because of this you easily have an internet of things device.
 
 > mbed picture 2.png
@@ -30,7 +30,7 @@ If you leave a puck in your bedroom at night, the smart device can automatically
 Only the imagination sets limits for what this system is able to do.
 
 As a showcase of how powerful pucks can be, we have created three pucks.
-These works together with the smart device, and as an extention, with eachother.
+These work together with the smart device, and as an extension, with each other.
 We have tutorials on how each of these pucks are made and you will find them on this webpage.
 
 > picture of cube puck
@@ -38,7 +38,7 @@ We have tutorials on how each of these pucks are made and you will find them on 
 The cube puck! With a single rotation you can change the mode for your environment.
 - Want the movie to pause or the music to turn off? Rotate the cube.
 - Want to set a timer for 5 minutes? Rotate the cube.
-- Want the ac to be a tiny bit colder? Rotate the cube.
+- Want the a/c to be a tiny bit colder? Rotate the cube.
 
 > picture of the IR puck
 
