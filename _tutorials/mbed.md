@@ -2,7 +2,7 @@
 layout: tutorial
 title: mbed Tool Chain
 description: How to use mbed.org
-image: /images/mbedlogosnip.png
+image: images/mbedlogosnip.png
 order: 20
 ---
 
