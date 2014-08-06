@@ -17,8 +17,8 @@ In short, a puck is a Bluetooth Low Energy-powered device that will, using your 
 The location puck will give your smartphone context about the phone's location.
 You can later set up rules for what should happen at different locations. More on rules later.
 
-## 1. Create a location puck
-If you are not familiar with the mbed development system, [please read these sections first]().
+## 1. Create a location puck {#create}
+If you are not familiar with the mbed development system, [please read these sections first](#development).
 
 We are going to create a location puck from scratch.
 To do this, create a new program, but change the template to "Empty program".
@@ -90,8 +90,14 @@ Also make a choice about visibility of your program. When you press OK you will 
 > ![](../images/IMG_20140729_142743.jpg)
 > Finished location puck
 
+# Complete {#complete}
 
-# Intro to mbed online development system
+Congratulations! You are now done with this tutorial!
+You have a fully functioning location puck!
+You can read about how to use this location puck with your smartphone in our [Smart Phone app guide](smartphone-apps.html).
+These guides will introduce you to the concept about rules for you pucks. This is the technique we use to make your pucks interact with your phone.
+
+# Intro to mbed online development system {#development}
 
 ## 1. Register on mbed.org and add Nordic nRF51822 to your online IDE
 First thing's first - set up your IDE. We will use the official mbed IDE in the browser.
@@ -169,9 +175,4 @@ To run your code you press the "Compile" button in the top center.
 Or alternatively press CTRL/CMD + D. A .hex file will be downloaded to your computer, which you can drag over to your mbed form the file explorer, and the mbed will flash the new software.
 Reset the mbed and you should see a LED flashing.
 
-# Complete
-
-Congratulations! You are now done with this tutorial!
-You have a fully functioning location puck!
-You can read about how to use this location puck with your smartphone in our [Smart Phone app guide](smartphone-apps.html).
-These guides will introduce you to the concept about rules for you pucks. This is the technique we use to make your pucks interact with your phone.
+[Now go back and read how to make your location pcuk!](#create)
