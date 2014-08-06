@@ -52,4 +52,4 @@ Always be able to access information when you need to without having to switch c
 
 > something here?
 
-To get started you can have a look at our [location puck tutorial](location.html)
+To get started you can have a look at our [location puck tutorial](tutorials/location.html)
