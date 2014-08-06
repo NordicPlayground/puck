@@ -167,9 +167,5 @@ mbed Location Puck
 
 Congratulations! You are now done with this tutorial!
 You have a fully functioning location puck!
-You can read about how to use this location puck with your smartphone in one of our puck app guides:
-
-- iOS: <#link to iOS guide here#>
-- Android: <#link to Android guide here#>
-
+You can read about how to use this location puck with your smartphone in our [Smart Phone app guide](smartphone-apps.html).
 These guides will introduce you to the concept about rules for you pucks. This is the technique we use to make your pucks interact with your phone.
