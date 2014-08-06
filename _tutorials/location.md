@@ -2,7 +2,7 @@
 layout: tutorial
 title: Location Puck
 description: How to create your own Location Puck
-image: http://lorempixel.com/g/400/400/
+image: images/IMG_20140729_142743.jpg
 order: 1
 ---
 
