@@ -80,7 +80,7 @@ Now we are going to go through the cube puck source code line-by-line, explainin
 MPU6050 mpu;
 {% endhighlight %}
 
-In order to use the MPI5060 library, we need to include the MPU5060 header and create an MPU5060 object.
+In order to use the MPU5060 library, we need to include the MPU5060 header and create an MPU5060 object.
 
 
 
