@@ -2,10 +2,11 @@
 layout: tutorial
 title: Display Puck
 description: How to create your own Display Puck
-image: ../images/displaypuck.png
+image: images/displaypuck.png
 order: 4
 ---
 
+> ![](../images/displaypuck.png)
 
 This tutorial is part of a tutorial series on the [Nordic Pucks](../tutorials.html).
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
