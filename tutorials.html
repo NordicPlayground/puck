@@ -11,7 +11,8 @@ layout: tutorials
   <p>Get started with puck creation.</p>
 </div>
 
-{% for tutorial in site.tutorials %}
+{% assign tutorials = site.tutorials | sort: 'order' %}
+{% for tutorial in tutorials %}
 
 <div class="container">
   <div class="tutorial-box">

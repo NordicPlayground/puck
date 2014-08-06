@@ -3,6 +3,7 @@ layout: tutorial
 title: Cube Puck
 description: How to create your own Cube Puck
 image: http://www.finefurniture.co/images/V184B.JPG
+order: 3
 ---
 
 This tutorial is part of a tutorial series on the [Nordic Pucks].

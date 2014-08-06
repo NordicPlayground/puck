@@ -3,6 +3,7 @@ layout: tutorial
 title: Puck Central
 description: How to use the smartphone companion application for iOS and Android
 image: http://lorempixel.com/g/400/400/
+order: 8
 ---
 
 # Introduction
