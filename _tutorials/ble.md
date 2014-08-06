@@ -2,7 +2,7 @@
 layout: tutorial
 title: Bluetooth Low Energy
 description: How does Bluetooth Low Energy work?
-image: http://lorempixel.com/g/400/400/
+image: images/bluetooth-le-logo.png
 order: 10
 ---
 
