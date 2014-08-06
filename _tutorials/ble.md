@@ -6,7 +6,7 @@ image: http://lorempixel.com/g/400/400/
 order: 10
 ---
 
-This tutorial will provide a brief introduction to the basics of Bleutooth Low Energy.
+This tutorial will provide a brief introduction to the basics of Bluetooth Low Energy.
 
 ## GAP
 
