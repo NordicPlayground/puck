@@ -2,7 +2,7 @@
 layout: tutorial
 title: Cube Puck
 description: How to create your own Cube Puck
-image: images/cube.png
+image: images/cube.jpg
 order: 3
 ---
 
@@ -16,7 +16,7 @@ The cube puck is completely customizable and therefore also quite versatile.
 > ![](http://www.finefurniture.co/images/V184B.JPG)
 > Artist's rendition of what a cube might look like.
 
-> ![](../images/cube.png)
+> ![](../images/cube.jpg)
 > What our cube looks like.
 
 # Requirements
