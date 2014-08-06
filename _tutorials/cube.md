@@ -9,8 +9,8 @@ order: 3
 This tutorial is part of a [tutorial series on the Nordic Pucks](../tutorials.html).
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
-In this tutorial, we will be building a cube puck, which is an innovative, new, bluetooth-enabled, situated and immersed remote control device.
-It is a six-sided cube that can be rotated to any of its sides to invoke the semantics linked to that side.
+In this tutorial, we will be building a cube puck, which is an innovative bluetooth-enabled remote control device.
+It is a six-sided cube that can be rotated to any of its sides to invoke actions linked to that side.
 The cube puck is completely customizable and therefore also quite versatile.
 
 > ![](http://www.finefurniture.co/images/V184B.JPG)
