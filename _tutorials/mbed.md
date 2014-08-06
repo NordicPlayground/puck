@@ -84,4 +84,4 @@ To run your code you press the "Compile" button in the top center.
 Or alternatively press CTRL/CMD + D. A .hex file will be downloaded to your computer, which you can drag over to your mbed form the file explorer, and the mbed will flash the new software.
 Reset the mbed and you should see a LED flashing.
 
-[Now go and read how to make your location pcuk!](location.html)
+[Now go and read how to make your location puck!](location.html)
