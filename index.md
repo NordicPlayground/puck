@@ -32,14 +32,14 @@ As a showcase of how powerful pucks can be, we have created three pucks.
 These work together with the smart device, and as an extension, with each other.
 We have tutorials on how each of these pucks are made and you will find them on this webpage.
 
-> ![](images/cube.png)
+> ![](images/cube.jpg)
 
 The cube puck! With a single rotation you can change the mode for your environment.
 - Want the movie to pause or the music to turn off? Rotate the cube.
 - Want to set a timer for 5 minutes? Rotate the cube.
 - Want the a/c to be a tiny bit colder? Rotate the cube.
 
-> ![](images/IR-nofilter.png)
+> ![](images/IR-nofilter.jpg)
 
 The IR puck! Command any infrared device.
 Any TV, DVD player, radio, stereo and more can be controlled.
