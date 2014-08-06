@@ -16,7 +16,7 @@ It is completely customizable and therefore also quite versatile.
 > Artist's rendition of what a cube might look like.
 
 # Requirements
-- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 - 1x [MPU5060 IMU (Inertial measurement unit)](https://www.sparkfun.com/products/11028)
 - 2x header pins
 - 5x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)

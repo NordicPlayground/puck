@@ -15,7 +15,7 @@ This tutorial will describe how to create a Bluetooth-enabled puck with an e-pap
 > If you're cramped for cash, you can try building casing out of cardboard and packaging tape.
 
 # Requirements
-- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 - 1x [E-Paper display](http://www.seeedstudio.com/depot/27-ePaper-Panel-p-1596.html?cPath=34_82)
 - 1x [E-Paper shield](http://www.seeedstudio.com/depot/Small-epaper-Shield-p-1597.html)
 - 20x [Female -> Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
@@ -24,7 +24,7 @@ This tutorial will describe how to create a Bluetooth-enabled puck with an e-pap
 
 # Hardware
 
-We will be using an e-paper display from seeedstudio. It comes with a shield which we are going to wire onto our nrf51822.
+We will be using an e-paper display from seeedstudio. It comes with a shield which we are going to wire onto our nRF51822.
 
 
 > ![](../images/display_wrapped.jpg)
@@ -61,7 +61,7 @@ The e-paper shield is an arduino shield, but since we're using a different form-
 > ![](../images/IMG_2675.JPG)
 > Wires connected to the shield.
 
-In the future a pin adaptor might be available for the nrf51822 which will make it easier to connect arduino shields without using single wires.
+In the future a pin adaptor might be available for the nRF51822 which will make it easier to connect arduino shields without using single wires.
 
 # Software
 

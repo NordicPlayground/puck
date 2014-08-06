@@ -12,7 +12,7 @@ In this tutorial, we will be building an IR puck, which is a puck that can mimic
 This is useful for controlling things like TVs, radios, airconditioners, window blinds, and just about anything and everything that can be otherwise be controlled by a regular remote control.
 
 # Requirements
-- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 - 3x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 - IR led
 - Resistors (1k and one for your IR led)
