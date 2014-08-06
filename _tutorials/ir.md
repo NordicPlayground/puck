@@ -2,7 +2,7 @@
 layout: tutorial
 title: IR Puck
 description: How to create your own IR Puck
-image: http://lorempixel.com/g/400/400/
+image: images/IR.jpg
 order: 2
 ---
 
@@ -11,6 +11,9 @@ I am assuming that you have already read the [introduction tutorial] and the [lo
 
 In this tutorial, we will be building an IR puck, which is a puck that can mimic arbitrary infrared remote controls.
 This is useful for controlling things like TVs, radios, airconditioners, window blinds, and just about anything and everything that can be otherwise be controlled by a regular remote control.
+
+> ![](../images/IR.jpg)
+> This is what the IR Puck looks like, if you go a little overboard with photo filters.
 
 # Requirements
 - 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
