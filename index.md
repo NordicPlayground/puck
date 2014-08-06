@@ -21,7 +21,7 @@ The basis for this is the mbed chip, but you can add any chassis or hardware you
 This puck will be able to talk to the internet through your smart phone.
 Because of this you easily have an internet of things device.
 
-> ![](../images/IMG_20140729_142743.jpg)
+> ![](images/IMG_20140729_142743.jpg)
 
 The fundamentals of a puck is that it will always broadcast its position.
 This is very powerful, and makes even the simplest puck able to give context to all smart devices listening.
@@ -32,20 +32,20 @@ As a showcase of how powerful pucks can be, we have created three pucks.
 These work together with the smart device, and as an extension, with each other.
 We have tutorials on how each of these pucks are made and you will find them on this webpage.
 
-> ![](../images/cube.png)
+> ![](images/cube.png)
 
 The cube puck! With a single rotation you can change the mode for your environment.
 - Want the movie to pause or the music to turn off? Rotate the cube.
 - Want to set a timer for 5 minutes? Rotate the cube.
 - Want the a/c to be a tiny bit colder? Rotate the cube.
 
-> ![](../images/IR-nofilter.png)
+> ![](images/IR-nofilter.png)
 
 The IR puck! Command any infrared device.
 Any TV, DVD player, radio, stereo and more can be controlled.
 Use this together with the cube and the cube becomes a remote controll for all your IR items.
 
-> ![](../images/displaypuck.png)
+> ![](images/displaypuck.png)
 
 The display puck! Get the weather information displayed on this puck when you come near it.
 Always be able to access information when you need to without having to switch context by looking at your phone.
