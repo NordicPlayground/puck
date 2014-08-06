@@ -1,6 +1,5 @@
 ---
-layout: post
-title: This is a puck
+layout: default
 ---
 
 Raspberry Pi took the maker community by storm when it launched in 2012.
