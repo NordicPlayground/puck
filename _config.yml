@@ -5,9 +5,9 @@ highlighter: pygments
 description: An mbed project
 baseurl: /puck
 github: http://www.github.com/NordicSemiconductor
-twitter: http://www.twitter.com/
-email: rnpatel[at]me.com
-disqus: diqus-username
+# t twitter: http://www.twitter.com/
+email: stian.jensen@nordicsemi.no
+disqus: nordicpucks
 
 collections:
   tutorials:
