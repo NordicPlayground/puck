@@ -6,10 +6,9 @@ image: http://lorempixel.com/g/400/400/
 order: 20
 ---
 
-# Intro to mbed online development system {#development}
+# Intro to mbed online development system
 
-## 1. Register on mbed.org and add Nordic nRF51822 to your online IDE
-First thing's first - set up your IDE. We will use the official mbed IDE in the browser.
+First things first - set up your IDE. We will use the official mbed IDE in the browser.
 This allows for extremely mobile development as you are not bound by your own computer to do development.
 Another huge benefit is that you do not need to set up any development stack locally (!).
 
@@ -17,7 +16,9 @@ When an mbed is connected to your computer it will show up as a USB drive, in th
 Compiling your code at mbed.org will download a .hex file to your computer, which when copied over to your mbed will update it with your program.
 The mbed will flash its lights for a few seconds, and afterwards you will need to press the reset button in order to start your newly transferred (flashed) program.
 
-First go to http://www.mbed.org
+## 1. Register on mbed.org
+
+First go to <http://www.mbed.org>
 
 > ![](../images/mbed_login_signup.PNG)
 > mbed.org front page with signup button encircled
@@ -32,9 +33,11 @@ Press the compiler button in the top right corner to enter the compiler.
 > ![](../images/mbed_compiler.PNG)
 > mbed.org front page with the compiler button encircled
 
+## 2. Add Nordic nRF51822 to the online IDE
+
 When you first enter the compiler it will look like any other program on your computer.
 This is the compiler you will use for every mbed out there.
-You therefore have to start off by adding your mbed to your compiler.
+You therefore have to start off by adding your mbed platform to the compiler.
 Do this by pressing the "No device selected" button.
 
 > ![](../images/mbed_entered_compiler.PNG)
@@ -49,9 +52,11 @@ Press that button and add your "Nordic nRF51822" device to the compiler by first
 Go back to your compiler and press the "No selected device" button again.
 Now select your "Nordic nRF51822" device by pressing that one first and the "Select platform" button after. You are now ready to add some programs to your compiler.
 
-## 2. Create your first program in the online compiler
+## 3. Create your first program in the online compiler
+
 To create a new program in your compiler press the New button in the top left side of the compiler.
-If you press the arrow on the side, you are prompted with multiple choices as to what kind of code you are writing, select New Program. You will now have some choices to what you program is.
+If you press the arrow on the side, you are prompted with multiple choices as to what kind of code you are writing, select New Program.
+You will now have some choices to what you program is.
 
 > ![](../images/mbed_new_program.PNG)
 > Create a new program in the mbed.og Compiler
