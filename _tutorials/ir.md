@@ -2,7 +2,7 @@
 layout: tutorial
 title: IR Puck
 description: How to create your own IR Puck
-image: images/IR.jpg
+image: images/IR-nofilter.jpg
 order: 2
 ---
 
