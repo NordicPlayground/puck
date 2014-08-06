@@ -10,7 +10,7 @@ If you are not familiar with pucks or our project, please read our [introductory
 In short, a puck is a Bluetooth Low Energy-powered device that will, using your smartphone as a central hub, work as a building block for your Internet-of-Things-related needs. 
 
 # Requirements
-- 1x [Nordic nrf51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
 
 # Location Puck
 The location puck will give your smartphone context about the phone's location.
