@@ -9,13 +9,22 @@ This project is created by four summer interns at Nordic Semiconductor.
 
 
 > # Aleksander Vognild Burkow
-> GitHub: [@aleksanb](https://github.com/aleksanb)
+
+![](https://avatars1.githubusercontent.com/u/1413365?v=2&s=200)
+GitHub: [@aleksanb](https://github.com/aleksanb)
 
 > # Sigve Sebastian Farstad
-> GitHub: [@sigvef](https://github.com/sigvef)
 
-> # Christoffer Tønnessen
-> GitHub: [@cristeahub](https://github.com/cristeahub)
+![](https://avatars2.githubusercontent.com/u/578029?v=2&s=200)
+GitHub: [@sigvef](https://github.com/sigvef)
 
 > # Stian Jensen
-> GitHub: [@stianjensen](https://github.com/stianjensen)
+
+![](https://avatars3.githubusercontent.com/u/1413267?v=2&s=200)
+GitHub: [@stianjensen](https://github.com/stianjensen)
+
+> # Christoffer Tønnessen
+
+![](https://avatars3.githubusercontent.com/u/1488921?v=2&s=200)
+GitHub: [@cristeahub](https://github.com/cristeahub)
+
