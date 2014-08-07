@@ -39,7 +39,7 @@ The first thing you will be prompted with is the mbed library.
 This is a vital library you will need in all of your projects. Import that one first.
 You have a search box in your import Wizard, type in the words Puck and select the version from Team Nordic Pucks. Double click that line to import the Puck library.
 
-> mbed_import_puck_lib.PNG
+> ![](../images/mbed_import_puck_lib.PNG)
 
 You can now see all the files in our Puck library.
 Most of the files are not important right now, but note the file named Puck.h.
