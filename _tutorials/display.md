@@ -17,7 +17,7 @@ This tutorial will describe how to create a Bluetooth-enabled puck with an e-pap
 > If you're cramped for cash, you can try building casing out of cardboard and packaging tape.
 
 # Requirements
-- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/) ([Buy one here!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226))
 - 1x [E-Paper display](http://www.seeedstudio.com/depot/27-ePaper-Panel-p-1596.html?cPath=34_82)
 - 1x [E-Paper shield](http://www.seeedstudio.com/depot/Small-epaper-Shield-p-1597.html)
 - 20x [Female -> Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
