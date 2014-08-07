@@ -3,7 +3,7 @@ layout: default
 ---
 
 Raspberry Pi took the maker community by storm when it launched in 2012.
-With its internet access it allowed for small projects be internet-of-things enabled.
+With its internet access it allowed small projects to be internet-of-things enabled.
 We have created a platform to take this one step further.
 
 Our platform, called the Puck platform, is an internet of things platform for mbed.
@@ -30,24 +30,28 @@ Only the imagination sets limits for what this system is able to do.
 
 As a showcase of how powerful pucks can be, we have created three pucks.
 These work together with the smart device, and as an extension, with each other.
-We have tutorials on how each of these pucks are made and you will find them on this webpage.
+We have [tutorials](tutorials.html) on how each of these pucks are made that you can find on this webpage.
 
 > ![](images/cube.jpg)
 
-The cube puck! With a single rotation you can change the mode for your environment.
+**The cube puck!** With a single rotation you can change the mode for your environment.
+
 - Want the movie to pause or the music to turn off? Rotate the cube.
-- Want to set a timer for 5 minutes? Rotate the cube.
-- Want the a/c to be a tiny bit colder? Rotate the cube.
+- Want to set a timer for 5 minutes? Rotate the cub.
+- Want the A/C to be a tiny bit colder? Rotate the cube.
 
 > ![](images/IR-nofilter.jpg)
 
-The IR puck! Command any infrared device.
+**The IR puck!** Command any infrared device.
+
 Any TV, DVD player, radio, stereo and more can be controlled.
-Use this together with the cube and the cube becomes a remote controll for all your IR items.
+Use this together with the cube and the cube becomes a remote controll for all your IR item.
 
 > ![](images/displaypuck.png)
 
-The display puck! Get the weather information displayed on this puck when you come near it.
-Always be able to access information when you need to without having to switch context by looking at your phone.
+**The display puck!** Display any text or black/white image on an e-paper display.
 
-To get started you can have a look at our [location puck tutorial](tutorials/location.html)
+Get the weather information displayed on this puck when you come near it.
+Always be able to access information when you need to without having to pull up your phone.
+
+To get started making your own pucks, you can have a look at our [location puck tutorial](tutorials/location.html)
