@@ -19,4 +19,5 @@ More information, documentation and tutorials: http://nordicsemiconductor.github
 
 - Companion iOS app: https://github.com/NordicSemiconductor/puck-central-ios
 - Companion Android app: https://github.com/NordicSemiconductor/puck-central-android
+
 - Mbed convenience utilities and tools: https://github.com/NordicSemiconductor/mbed-utils
