@@ -21,16 +21,11 @@ Whether you want to monitor your door to tell if it's open or closed, or maybe y
 We've developed a handful of awesome examples to demonstrate the platform. These examples are named 'Pucks'.
 By talking to the internet through your smartphone, the barrier to creating your own Internet of Things device is lower than ever.
 
+We have [tutorials](tutorials.html) on how each of these pucks are made that you can find on this webpage.
+
 > ![](images/IMG_20140729_142743.jpg)
 
-The fundamentals of a puck is that it will always broadcast its position.
-This is very powerful, and makes even the simplest puck able to give context to all smart devices listening.
-If you leave a puck in your bedroom at night, the smart device can automatically go to do not disturb mode for the night, and based on the day, set the correct alarm.
-Only the imagination sets limits for what this system is able to do.
-
-As a showcase of how powerful pucks can be, we have created three pucks.
-These work together with the smart device, and as an extension, with each other.
-We have [tutorials](tutorials.html) on how each of these pucks are made that you can find on this webpage.
+All pucks act as beacons, broadcasting information to any device nearby. Leave a puck in your bedroom, and your smartphone can automatically go to silent mode for the night, as well as set an alarm for the following day.
 
 > ![](images/cube.jpg)
 
