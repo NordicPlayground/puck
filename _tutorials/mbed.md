@@ -8,12 +8,12 @@ order: 20
 
 # Intro to mbed online development system
 
-First things first - set up your IDE. We will use the official mbed IDE in the browser.
+First things first - set up your IDE. We will use the official mbed IDE which runs in your browser.
 This allows for extremely mobile development as you are not bound by your own computer to do development.
 Another huge benefit is that you do not need to set up any development stack locally (!).
 
 When an mbed is connected to your computer it will show up as a USB drive, in the same way a memory stick does.
-Compiling your code at mbed.org will download a .hex file to your computer, which when copied over to your mbed will update it with your program.
+Compiling your code at mbed.org will download a .hex file to your computer which when copied over to your mbed will update it with your program.
 The mbed will flash its lights for a few seconds, and afterwards you will need to press the reset button in order to start your newly transferred (flashed) program.
 
 ## 1. Register on mbed.org
@@ -28,7 +28,7 @@ Press the login or signup button and create yourself a user account.
 After having done so, log in with your newly created user.
 You will be able to enter the online IDE now and start your own projects!
 The online IDE for mbed is called "Compiler". It is where you will write your code, import libraries and even review pull requests, all in the browser.
-Press the compiler button in the top right corner to enter the compiler.
+Press the compiler button in the top right corner to enter the compiler in a new tab.
 
 > ![](../images/mbed_compiler.PNG)
 > mbed.org front page with the compiler button encircled
