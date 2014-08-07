@@ -16,7 +16,7 @@ This is useful for controlling things like TVs, radios, airconditioners, window 
 > This is what the IR Puck looks like, if you go a little overboard with photo filters.
 
 # Requirements
-- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/) ([Buy one here!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226))
 - 3x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 - IR led
 - Resistors (1k and one for your IR led)
