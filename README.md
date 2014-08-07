@@ -1,41 +1,21 @@
-Herring Cove
-============
-
-Herring Cove is a clean and responsive theme for Jekyll. 
+# Nordic Pucks
 
 
-### Overview 
+Raspberry Pi took the maker community by storm when it launched in 2012. With its internet access it allowed small projects to be internet-of-things enabled. We have created a platform to take this one step further.
 
-* Fixed Sidebar with social links
-* Minimal design 
-* Comments by Disqus
-* Social Sharing abilities 
-* Easy to configure
-* Based on Bootstrap
+Our platform, called the Puck platform, is an internet of things platform for mbed. mbed makes it easy to program embedded hardware for people new to embedded systems. Our platform is built upon the first mbed chip with Bluetooth, created by Nordic Semiconductor. We hope to create a community around these BLE devices where people contribute to the project, and share their designs with each other. Everything is open-source, of course, with lots of supporting materials.
 
-### Screenshots
+More information, documentation and tutorials: http://nordicsemiconductor.github.io/puck/
 
-![screenshot](/images/screenshot1.png)
-![screenshot](/images/screenshot2.png)
 
-### Setup
+## Other Repositories
 
-1. Install Jekyll
-2. Fork or [download](https://github.com/arnp/herring-cove/archive/master.zip) this theme repo
-3. Edit the `_config.yml` file
+The Puck library: https://mbed.org/teams/Nordic-Pucks/code/Puck/
+The Location Puck: https://mbed.org/teams/Nordic-Pucks/code/location-puck/
+The IR Puck: https://mbed.org/teams/Nordic-Pucks/code/ir-puck/
+The Display Puck: https://mbed.org/teams/Nordic-Pucks/code/display-puck/
+The Cube Puck: https://mbed.org/teams/Nordic-Pucks/code/cube-puck/
 
-You can change the showcase image by replacing `showcase.jpg` file in the `images` folder. I'll try to find a better way to do this soon. 
-
-### Download
-
-[download](https://github.com/arnp/herring-cove/archive/master.zip)
-
-### License
-* [MIT](http://opensource.org/licenses/MIT)
-
--------------
-Herring Cove is always a work in progress and as such, I hope to clean up the code and add features as time permits. Feel free to add your own additions. 
-
-*What's with the name?*
-
-[Herring Cove](http://www.capecodbeachchair.com/beachguide/index.cfm?page=3&BeachID=5) is a beach on Cape Cod in Provincetown, Massachusetts. If you're in the area, be sure to check it out!
+Companion iOS app: https://github.com/NordicSemiconductor/puck-central-ios
+Companion Android app: https://github.com/NordicSemiconductor/puck-central-android
+Mbed convenience utilities and tools: https://github.com/NordicSemiconductor/mbed-utils
