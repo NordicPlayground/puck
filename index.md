@@ -7,19 +7,19 @@ With its internet access it allowed small projects to be internet-of-things enab
 We have created a platform to take this one step further.
 
 Our platform, called the Puck platform, is an internet of things platform for mbed.
-mbed makes it easy to program embedded chips for people who have not been working with embedded systems before.
+mbed makes it easy to program embedded hardware for people new to embedded systems.
 Our platform is built upon the first mbed chip with Bluetooth, created by Nordic Semiconductor.
-With our platform, we hope to make it the Raspberry Pi of Bluetooth.
+We hope to create a community around these BLE devices where people contribute to the project, and share their designs with each other. Everything is open-source, of course, with lots of supporting materials.
 
 > The Raspberry Pi of Bluetooth
 
-With our system it is easier than ever before to make your project dreams come true.
-Whether you want to monitor your door to tell if it's open or closed, or maybe your want to text your wife when you leave work.
-We will help you make an entity that we call a Puck.
-A puck is the physical object you create.
-The basis for this is the mbed chip, but you can add any chassis or hardware you want.
-This puck will be able to talk to the internet through your smart phone.
-Because of this you easily have an internet of things device.
+We make it easy to rapidly prototype and develop Bluetooth LE enabled devices - get up and running in under 10 lines of code, written directly in the browser.
+
+
+Whether you want to monitor your door to tell if it's open or closed, or maybe your want to text your wife when you leave work, together, now's the time to make that project.
+
+We've developed a handful of awesome examples to demonstrate the platform. These examples are named 'Pucks'.
+By talking to the internet through your smartphone, the barrier to creating your own Internet of Things device is lower than ever.
 
 > ![](images/IMG_20140729_142743.jpg)
 
