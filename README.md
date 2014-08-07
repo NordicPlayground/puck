@@ -1,5 +1,6 @@
 # Nordic Pucks
 
+## [Information, documentation and tutorials (and pictures!)](http://nordicsemiconductor.github.io/puck/)
 
 Raspberry Pi took the maker community by storm when it launched in 2012. With its internet access it allowed small projects to be internet-of-things enabled. We have created a platform to take this one step further.
 
