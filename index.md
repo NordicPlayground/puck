@@ -62,5 +62,5 @@ Display the current weather on this puck when you're nearby, or display an up-to
 To get started making your own pucks, you can have a look at our [location puck tutorial](tutorials/location.html).
 
 
-> [Buy the nRF51822 mbed development board here to get started!](http://www.digikey.com/product-search/en?vendor=0&keywords=nRF51822-mKIT)
+> [Buy the nRF51822 mbed development board here to get started!](http://www.digikey.com/product-search/en?vendor=0&keywords=nRF51822-mKIT) <br>
 > [It can also be purchased from the following vendors providers](https://www.nordicsemi.com/eng/Products/Bluetooth-R-low-energy/nRF51822-mKIT)
