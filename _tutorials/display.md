@@ -136,6 +136,7 @@ The code for this is as follows. Most of the magic here is happening inside the 
 
 > {% highlight cpp %}
 case COMMAND_IMAGE_UPPER:
+    puck->disconnect();
     LOG_INFO("Writing image to top half of display.\n");
     reverseBufferSegment(receiveIndex, BUFFER_SIZE);
     LZ_Uncompress(buffer + receiveIndex, buffer, BUFFER_SIZE - receiveIndex);
