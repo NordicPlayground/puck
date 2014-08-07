@@ -22,6 +22,8 @@ We've developed a handful of awesome examples to demonstrate the platform. These
 By talking to the internet through your smartphone, the barrier to creating your own Internet of Things device is lower than ever.
 
 We have [tutorials](tutorials.html) on how each of these pucks are made that you can find on this webpage.
+All these pucks are made possible by the [nRF51822](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226), a Bluetooth-enabled mbed development board. [Buy it here to get started!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226).
+
 
 > ![](images/IMG_20140729_142743.jpg)
 
@@ -51,4 +53,5 @@ Use this together with the cube, and the cube becomes a remote control for your 
 
 Display the current weather on this puck when you're nearby, or display an up-to-date bus schedule at any time for your local bus stop. The possibilities are endless!
 
-To get started making your own pucks, you can have a look at our [location puck tutorial](tutorials/location.html)
+To get started making your own pucks, you can have a look at our [location puck tutorial](tutorials/location.html).
+
