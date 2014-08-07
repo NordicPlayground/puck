@@ -64,7 +64,7 @@ If a Display Puck or IR Puck is present, two additional actuators will appear:
 - Send IR Signal
 - Send Image / Text
 
-You can also create your own actuators. Read more about this in the [ Application Architecture ] tutorial.
+You can also create your own actuators. Read more about this in the READMEs on the app repositories for the [iOS app](https://github.com/NordicSemiconductor/puck-central-ios) and the [Android app](https://github.com/NordicSemiconductor/puck-central-android).
 
 ## Creating and deleting rules
 
@@ -105,6 +105,6 @@ To delete a rule, click 'Remove Puck' on iOS, and the garbage bin icon on Androi
 
 If you wish to extend the client application with your own actuators, you can read how to do so at the github pages of the respective applications.
 
-- Puck Central android link
-- Puck Central iOS link
+- [Puck Central android](https://github.com/NordicSemiconductor/puck-central-android)
+- [Puck Central iOS](https://github.com/NordicSemiconductor/puck-central-ios)
 
