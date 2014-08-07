@@ -20,7 +20,7 @@ The cube puck is completely customizable and therefore also quite versatile.
 > What our cube looks like.
 
 # Requirements
-- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
+- 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/) ([Buy one here!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226))
 - 1x [MPU6050 IMU (Inertial measurement unit)](https://www.sparkfun.com/products/11028)
 - 2x header pins
 - 5x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
