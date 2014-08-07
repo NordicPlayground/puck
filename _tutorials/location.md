@@ -18,7 +18,7 @@ The location puck will give your smartphone context about the phone's location.
 You can later set up rules for what should happen at different locations. More on rules later.
 
 ## 1. Create a location puck {#create}
-If you are not familiar with the mbed development system, [please read this tutorial first](mbed.html).
+If you are not familiar with the mbed development system, [please read this tutorial first](mbed.html) for an intro to using the online compiler.
 
 We are going to create a location puck from scratch.
 To do this, create a new program, but change the template to "Empty program".
