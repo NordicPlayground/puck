@@ -34,24 +34,24 @@ We have [tutorials](tutorials.html) on how each of these pucks are made that you
 
 > ![](images/cube.jpg)
 
-**The cube puck!** With a single rotation you can change the mode for your environment.
+**The cube puck!** With a single rotation you can change the function of the room you're in.
 
 - Want the movie to pause or the music to turn off? Rotate the cube.
-- Want to set a timer for 5 minutes? Rotate the cub.
+- Want to set a timer for 5 minutes? Rotate the cube.
 - Want the A/C to be a tiny bit colder? Rotate the cube.
 
 > ![](images/IR-nofilter.jpg)
 
 **The IR puck!** Command any infrared device.
 
-Any TV, DVD player, radio, stereo and more can be controlled.
-Use this together with the cube and the cube becomes a remote controll for all your IR item.
+The 'IR Puck' can mimic arbitrary infrared remote controls, and receive commands over Bluetooth. This enables your smartphone to control other devices like TVs, DVD-players and air-conditioners.
+
+Use this together with the cube, and the cube becomes a remote control for your IR equipment.
 
 > ![](images/displaypuck.png)
 
 **The display puck!** Display any text or black/white image on an e-paper display.
 
-Get the weather information displayed on this puck when you come near it.
-Always be able to access information when you need to without having to pull up your phone.
+Display the current weather on this puck when you're nearby, or display an up-to-date bus schedule at any time for your local bus stop. The possibilities are endless!
 
 To get started making your own pucks, you can have a look at our [location puck tutorial](tutorials/location.html)
