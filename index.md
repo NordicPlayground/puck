@@ -56,4 +56,4 @@ Display the current weather on this puck when you're nearby, or display an up-to
 To get started making your own pucks, you can have a look at our [location puck tutorial](tutorials/location.html).
 
 
-> [Buy the nRF51822 mbed development board here to get started!]((http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226)
+> [Buy the nRF51822 mbed development board here to get started!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226)
