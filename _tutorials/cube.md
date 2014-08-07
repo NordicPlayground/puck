@@ -21,27 +21,27 @@ The cube puck is completely customizable and therefore also quite versatile.
 
 # Requirements
 - 1x [Nordic nRF51822 mbed mKIT development board](https://mbed.org/platforms/Nordic-nRF51822/)
-- 1x [MPU5060 IMU (Inertial measurement unit)](https://www.sparkfun.com/products/11028)
+- 1x [MPU6050 IMU (Inertial measurement unit)](https://www.sparkfun.com/products/11028)
 - 2x header pins
 - 5x [Female to Female jumper wires](http://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=44_47)
 
 
 # Hardware
 
-The cube puck consists of an MPU5060 Intertial Measurement Unit wired together to an nRF51822 mbed.
+The cube puck consists of an MPU-6050 Intertial Measurement Unit wired together to an nRF51822 mbed.
 We are going to use the IMU to determine on which side the cube is currently resting.
-The MPU5060 IMU comes pre-soldered onto a breakout board, so we will need to connect it to our mbed using wires.
+The MPU-6050 IMU comes pre-soldered onto a breakout board, so we will need to connect it to our mbed using wires.
 We soldered some header pins to our IMU breakout board to allow easy wire connection, but you can also solder your wires directly onto the through-holes.
 
 > ![](../images/2014-07-30 16.52.09.jpg)
-> Some header pins soldered onto the MP5060 breakout board through-holes.
+> Some header pins soldered onto the MP6050 breakout board through-holes.
 
-In order to communicate with the MPU5060, will need to set up an [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) connection between the mbed board and the MPU5060, as well as connect power and ground.
+In order to communicate with the MPU6050, will need to set up an [I2C](http://en.wikipedia.org/wiki/I%C2%B2C) connection between the mbed board and the MPU-6050, as well as connect power and ground.
 The following table shows the wire mappings used in this project.
-The MPU5060 also supports interrupts using the INT pin, but we will not be using it in this tutorial.
+The MPU-6050 also supports interrupts using the INT pin, but we will not be using it in this tutorial.
 
 > |-------------------|---------------|
-> | mbed nRF pin      | MPU5060 pin   |
+> | mbed nRF pin      | MPU6050 pin   |
 > |-------------------|---------------|
 > | VCC               | VDD           |
 > |-------------------|---------------|
@@ -54,10 +54,10 @@ The MPU5060 also supports interrupts using the INT pin, but we will not be using
 > | I2C SCL1 (Pin 15) | SCL           |
 > |-------------------|---------------|
 >
-> Mbed/MPU5060 wiring overview.
+> Mbed/MPU6050 wiring overview.
 
 > ![](../images/2014-07-30 16.51.07.jpg)
-> MPU5060 wiring.
+> MPU6050 wiring.
 
 
 > ![](../images/2014-07-30 16.53.24.jpg)
@@ -84,7 +84,7 @@ Now we are going to go through the cube puck source code line-by-line, explainin
 MPU6050 mpu;
 {% endhighlight %}
 
-In order to use the MPU5060 library, we need to include the MPU5060 header and create an MPU5060 object.
+In order to use the MPU6050 library, we need to include the MPU6050 header and create an MPU6050 object.
 
 
 
