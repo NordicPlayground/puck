@@ -25,6 +25,8 @@ We have [tutorials](tutorials.html) on how each of these pucks are made that you
 
 > ![](images/IMG_20140729_142743.jpg)
 
+**The basic puck!**
+
 All pucks act as beacons, broadcasting information to any device nearby. Leave a puck in your bedroom, and your smartphone can automatically go to silent mode for the night, as well as set an alarm for the following day.
 
 > ![](images/cube.jpg)
