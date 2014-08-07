@@ -131,7 +131,6 @@ When we receive an `IMAGE_BEGIN` command, we set the `receiveIndex` (the index t
 It is then written backwards into the buffer as it is received. When we receive a command that tells us all the data has been transmitted, the received segment is flipped, decompressed, and finally written to the display.
 
 > ![](../images/receive%20image%20data.png)
-<< THIS IMAGE NEEDS A LEGEND TO EXPLAIN WTF RED AND ORANGEyellow is, also wut is green >>
 
 The code for this is as follows. Most of the magic here is happening inside the LZ-compression, which we will not be looking into. The decompressed image is then flashed to the display.
 
