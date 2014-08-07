@@ -281,6 +281,16 @@ pre
   background-size: cover;
   background-position: center;
   z-index:-4;
+
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+
+  align-items: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+
+  text-align: center;
 }
 
 .showcase-text
@@ -290,7 +300,10 @@ pre
   font-weight:bolder;
   color:#fff;
   text-align:center;
-  padding-top:13%;
+
+  flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
 }
 
 .wide
