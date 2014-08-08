@@ -27,13 +27,13 @@ All these pucks are made possible by the [nRF51822](http://www.semiconductorstor
 
 > ![](images/IMG_20140729_142743.jpg)
 
-**The basic puck!**
+**[The basic puck!](tutorials/location.html)**
 
 All pucks act as beacons, broadcasting information to any device nearby. Leave a puck in your bedroom, and your smartphone can automatically go to silent mode for the night, as well as set an alarm for the following day.
 
 > ![](images/cube.jpg)
 
-**The cube puck!**
+**[The cube puck!](tutorials/cube.html)**
 
 With a single rotation you can change the function of the room you're in.
 
@@ -43,7 +43,7 @@ With a single rotation you can change the function of the room you're in.
 
 > ![](images/IR-nofilter.jpg)
 
-**The IR puck!**
+**[The IR puck!](tutorials/ir.html)**
 
 Command any infrared device.
 
@@ -53,7 +53,7 @@ Use this together with the cube, and the cube becomes a remote control for your 
 
 > ![](images/displaypuck.png)
 
-**The display puck!**
+**[The display puck!](tutorials/display.html)**
 
 Display any text or black/white image on an e-paper display.
 
