@@ -13,6 +13,8 @@ In this tutorial, we will be building a cube puck, which is an innovative blueto
 It is a six-sided cube that can be rotated to any of its sides to invoke actions linked to that side.
 The cube puck is completely customizable and therefore also quite versatile.
 
+[View the finished project on mbed.org](https://mbed.org/teams/Nordic-Pucks/code/cube-puck/)
+
 > ![](http://www.finefurniture.co/images/V184B.JPG)
 > Artist's rendition of what a cube might look like.
 

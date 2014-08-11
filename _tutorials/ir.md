@@ -12,6 +12,8 @@ I am assuming that you have already read the [introduction tutorial] and the [lo
 In this tutorial, we will be building an IR puck, which is a puck that can mimic arbitrary infrared remote controls.
 This is useful for controlling things like TVs, radios, airconditioners, window blinds, and just about anything and everything that can be otherwise be controlled by a regular remote control.
 
+[View the finished project on mbed.org](https://mbed.org/teams/Nordic-Pucks/code/ir-puck/)
+
 > ![](../images/IR.jpg)
 > This is what the IR Puck looks like, if you go a little overboard with photo filters.
 
