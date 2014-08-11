@@ -19,7 +19,7 @@ We make it easy to rapidly prototype and develop Bluetooth LE enabled devices - 
 Whether you want to monitor your door to tell if it's open or closed, or maybe your want to text your wife when you leave work, together, now's the time to make that project.
 
 We've developed a handful of awesome examples to demonstrate the platform. These examples are named 'Pucks'.
-By talking to the internet through your smartphone, the barrier to creating your own Internet of Things device is lower than ever.
+By talking to the internet through your [smartphone](tutorials/smartphone-apps.html), the barrier to creating your own Internet of Things device is lower than ever.
 
 We have [tutorials](tutorials.html) on how each of these pucks are made that you can find on this webpage.
 All these pucks are made possible by the [nRF51822](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226), a Bluetooth-enabled mbed development board. [Buy it here to get started!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226).
