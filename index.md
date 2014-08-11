@@ -24,6 +24,8 @@ By talking to the internet through your [smartphone](tutorials/smartphone-apps.h
 We have [tutorials](tutorials.html) on how each of these pucks are made that you can find on this webpage.
 All these pucks are made possible by the [nRF51822](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226), a Bluetooth-enabled mbed development board. [Buy it here to get started!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226).
 
+[Click here to go to the projects mbed page.](https://mbed.org/teams/Nordic-Pucks/code/Puck/)
+
 
 > ![](images/IMG_20140729_142743.jpg)
 
