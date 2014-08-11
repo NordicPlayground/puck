@@ -17,6 +17,11 @@ From Puck Central you can subscribe to Puck events such as entering or leaving a
 
 This tutorial will show you how to use Puck Central to set up your own rules and triggers, and corresponding actions.
 
+You can get Puck Central at the following places:
+
+- [Puck Central Android](https://github.com/NordicSemiconductor/puck-central-android)
+- [Puck Central iOS](https://github.com/NordicSemiconductor/puck-central-ios)
+
 ## Pucks
 
 For the application to be able to listen in for events on pucks, and to avoid spam from unknown pucks, each puck has to be paired with the application before further usage.
@@ -105,6 +110,5 @@ To delete a rule, click 'Remove Puck' on iOS, and the garbage bin icon on Androi
 
 If you wish to extend the client application with your own actuators, you can read how to do so at the github pages of the respective applications.
 
-- [Puck Central android](https://github.com/NordicSemiconductor/puck-central-android)
+- [Puck Central Android](https://github.com/NordicSemiconductor/puck-central-android)
 - [Puck Central iOS](https://github.com/NordicSemiconductor/puck-central-ios)
-
