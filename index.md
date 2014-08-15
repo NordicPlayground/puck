@@ -8,10 +8,10 @@ We have created a platform to take this one step further.
 
 Our platform, called the Puck platform, is an internet of things platform for mbed.
 mbed makes it easy to program embedded hardware for people new to embedded systems.
-Our platform is built upon the first mbed chip with Bluetooth, created by Nordic Semiconductor.
+Our platform is built upon the first mbed chip with Bluetooth LE, created by Nordic Semiconductor.
 We hope to create a community around these BLE devices where people contribute to the project, and share their designs with each other. Everything is open-source, of course, with lots of supporting materials.
 
-> The Raspberry Pi of Bluetooth
+> The Raspberry Pi of Bluetooth LE
 
 We make it easy to rapidly prototype and develop Bluetooth LE enabled devices - get up and running in under 10 lines of code, written directly in the browser.
 
@@ -22,7 +22,7 @@ We've developed a handful of awesome examples to demonstrate the platform. These
 By talking to the internet through your [smartphone](tutorials/smartphone-apps.html), the barrier to creating your own Internet of Things device is lower than ever.
 
 We have [tutorials](tutorials.html) on how each of these pucks are made that you can find on this webpage.
-All these pucks are made possible by the [nRF51822](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226), a Bluetooth-enabled mbed development board. [Buy it here to get started!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226).
+All these pucks are made possible by the [nRF51822](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226), a Bluetooth LE-enabled mbed development board. [Buy it here to get started!](http://www.semiconductorstore.com/cart/pc/viewPrd.asp?idproduct=49226).
 
 [Click here to go to the projects mbed page.](https://mbed.org/teams/Nordic-Pucks/code/Puck/)
 
@@ -49,7 +49,7 @@ With a single rotation you can change the function of the room you're in.
 
 Command any infrared device.
 
-The 'IR Puck' can mimic arbitrary infrared remote controls, and receive commands over Bluetooth. This enables your smartphone to control other devices like TVs, DVD-players and air-conditioners.
+The 'IR Puck' can mimic arbitrary infrared remote controls, and receive commands over Bluetooth LE. This enables your smartphone to control other devices like TVs, DVD-players and air-conditioners.
 
 Use this together with the cube, and the cube becomes a remote control for your IR equipment.
 
