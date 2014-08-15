@@ -60,7 +60,7 @@ int main(void) {
 {% endhighlight %}
 
 The first line of code after the include is where we get a reference to the global Puck object.
-This object takes care of setting up Bluetooth. In the main function we initialize our puck and pass in an identifying number.
+This object takes care of setting up Bluetooth LE. In the main function we initialize our puck and pass in an identifying number.
 This number is what the accompanying apps are using when they connect to the pucks.
 It is not important exactly what this number is per se, but it needs to be unique for all your Pucks.
 After this is done, your setup is complete - the only thing left is to tell the puck that it needs to be running.
