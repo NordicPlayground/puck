@@ -11,7 +11,7 @@ order: 4
 This tutorial is part of a tutorial series on the [Nordic Pucks](../tutorials.html).
 I am assuming that you have already read the [introduction tutorial] and the [location puck tutorial](location.html).
 
-This tutorial will describe how to create a Bluetooth-enabled puck with an e-paper display. The display we have used is 264 x 176 pixels, and we're going to design a protocol which lets a connected device transmit an arbitrary black/white image to it via BLE. We will go through the necessary hardware setup, as well as the code needed to support it.
+This tutorial will describe how to create a Bluetooth LE-enabled puck with an e-paper display. The display we have used is 264 x 176 pixels, and we're going to design a protocol which lets a connected device transmit an arbitrary black/white image to it via BLE. We will go through the necessary hardware setup, as well as the code needed to support it.
 
 [View the finished project on mbed.org](https://mbed.org/teams/Nordic-Pucks/code/display-puck/)
 
@@ -84,7 +84,7 @@ EPD_Class EPD(p0, p2, p3, p8, p5, p6, p7);
 
 This gives us an `EPD_Class` upon which we can call convienient high-level methods such as `image` and `clear` to flash images, and clear the screen, respectively.
 
-Now that we have the possibility to write images to the screen, we need a way to transmit images over Bluetooth.
+Now that we have the possibility to write images to the screen, we need a way to transmit images over Bluetooth LE.
 For the display puck we have defined a custom GATT service ([read more about how GATT works in our BLE tutorial](ble.html)) with it's own UUID `"bftj display    "`.
 A bluetooth UUID is 128 bits long, so we use a convention with 16 letters of 8 bit each. `'bftj'` is a general prefix we've decided to use for all our pucks' UUIDs, to avoid collisions with other vendors.
 
@@ -199,4 +199,4 @@ It is important that `init(..)` gets called after we are done doing configuratio
 while (puck->drive());
 {% endhighlight %}
 
-Finally, we keep the puck alive in a simple while loop. This will concede control to the Bluetooth Soft Device, letting it do its magic.
+Finally, we keep the puck alive in a simple while loop. This will concede control to the Bluetooth LE Soft Device, letting it do its magic.
