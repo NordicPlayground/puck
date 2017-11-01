@@ -1,12 +1,12 @@
 # Nordic Pucks
 
-## [Information, documentation and tutorials (and pictures!)](http://nordicsemiconductor.github.io/puck/)
+## [Information, documentation and tutorials (and pictures!)](http://nordicplayground.github.io/puck/)
 
 Raspberry Pi took the maker community by storm when it launched in 2012. With its internet access it allowed small projects to be internet-of-things enabled. We have created a platform to take this one step further.
 
 Our platform, called the Puck platform, is an internet of things platform for mbed. mbed makes it easy to program embedded hardware for people new to embedded systems. Our platform is built upon the first mbed chip with Bluetooth, created by Nordic Semiconductor. We hope to create a community around these BLE devices where people contribute to the project, and share their designs with each other. Everything is open-source, of course, with lots of supporting materials.
 
-More information, documentation and tutorials: http://nordicsemiconductor.github.io/puck/
+More information, documentation and tutorials: http://nordicplayground.github.io/puck/
 
 
 ## Other Repositories
