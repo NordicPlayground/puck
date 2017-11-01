@@ -17,7 +17,7 @@ More information, documentation and tutorials: http://nordicsemiconductor.github
 - The Display Puck: https://mbed.org/teams/Nordic-Pucks/code/display-puck/
 - The Cube Puck: https://mbed.org/teams/Nordic-Pucks/code/cube-puck/
 
-- Companion iOS app: https://github.com/NordicSemiconductor/puck-central-ios
-- Companion Android app: https://github.com/NordicSemiconductor/puck-central-android
+- Companion iOS app: https://github.com/NordicPlayground/puck-central-ios
+- Companion Android app: https://github.com/NordicPlayground/puck-central-android
 
-- Mbed convenience utilities and tools: https://github.com/NordicSemiconductor/mbed-utils
+- Mbed convenience utilities and tools: https://github.com/NordicPlayground/mbed-utils
